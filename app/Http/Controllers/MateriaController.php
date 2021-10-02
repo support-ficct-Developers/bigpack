@@ -18,6 +18,15 @@ class MateriaController extends Controller
         return view('materia.index',compact('materias'));
     }
 
+    public function indexPost(Request $request){
+        $materias =Materia::paginate(5);
+        if ($request->ajax()){
+            $view =view('materiaPost.dataMateria',compact('materias'))->render();
+            return response()->json(['html'=>$view]);
+        }
+        return view('materiaPost.postMateria',compact('materias'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

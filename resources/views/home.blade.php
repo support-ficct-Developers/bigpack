@@ -28,7 +28,7 @@
 	<div class= "menu" >
         <div class="card-deck dashboard-card-deck">
             <div class="card dashboard-card" role="listitem" data-region="course-contend">
-                <a href="">
+                <a href="{{url('/postMaterias')}}">
                     <div class="card.img dashboard-card-img" style="color:#30ceae">
                         <img src="{{asset('imagenes/logo.png')}}" width="150" height="150">
                     </div>
