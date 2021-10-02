@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Semestre;
+use App\Models\Materia;
 
 class DatabaseSeeder extends Seeder
 {
@@ -47,6 +48,22 @@ class DatabaseSeeder extends Seeder
         ]);
         Semestre::create([
             'nombre'=> 'Electivas',
+        ]);
+
+        Materia::create([
+            'id_semestre'=> '1',
+            'nombre'=>'Introduccion a la informatica',
+            'sigla'=> 'INF110'
+        ]);
+        Materia::create([
+            'id_semestre'=> '1',
+            'nombre'=>'Estructuras Discretas',
+            'sigla'=> 'INF119'
+        ]);
+        Materia::create([
+            'id_semestre'=> '1',
+            'nombre'=>'Fisica 1',
+            'sigla'=> 'FIS100'
         ]);
     }
 }
