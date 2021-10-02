@@ -280,6 +280,10 @@ return [
                     'text' => 'Docente',
                     'url'  => 'docentes',
                 ],
+                [
+                    'text' => 'Semestre',
+                    'url'  => 'semestres',
+                ],
             ],
         ],
         ['header' => 'CONTACTANOS'],

@@ -72,6 +72,13 @@ class DatabaseSeeder extends Seeder
             'nombre'=>'Ingles 1',
             'sigla'=> 'LIN100'
         ]);
+
+        Materia::create([
+            'id_semestre'=> '2',
+            'nombre'=>'Fisica 2',
+            'sigla'=> 'FIS101'
+        ]);
+
         Docente::create([
             'nombre'=>'Mario Lopez Winnipeg',
         ]);
@@ -104,6 +111,12 @@ class DatabaseSeeder extends Seeder
             'id_materia'=> '4',
             'id_docente'=>'4',
             'link'=> 'https://www.google.com/?hl=es&gws_rd=ssl'
+        ]);
+
+        Pack::create([
+            'id_materia'=> '4',
+            'id_docente'=>'4',
+            'link'=> 'https://herllo'
         ]);
     }
 }
