@@ -2,6 +2,7 @@
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\PackController;
+use App\Http\Controllers\SemestreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,4 @@ Route::resource('materias',MateriaController::class);
 Route::resource('packs',PackController::class);
 route::get('/postMaterias',[MateriaController::class,'indexPost']);
 route::get('/postPacks',[PackController::class,'indexPost']);
+route::get('/postSemestre',[SemestreController::class,'indexPost']);

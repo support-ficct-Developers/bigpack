@@ -16,6 +16,10 @@ class SemestreController extends Controller
     {
         //
     }
+    public function indexPost()
+    {
+        return view('home');
+    }
 
     /**
      * Show the form for creating a new resource.

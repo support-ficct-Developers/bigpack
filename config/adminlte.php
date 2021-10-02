@@ -249,7 +249,7 @@ return [
         [
             'text'       => 'INICIO',
             'icon' => 'fas fa-home',
-            'url'        => '/home',
+            'url'        => '/postSemestre',
         ],
     
         ['header' => 'account_settings'],
