@@ -23,7 +23,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('docentes',DocenteController::class);
+Route::resource('docentes',DocenteController::class)->names('admin.docentes');
 Route::resource('materias',MateriaController::class);
 Route::resource('packs',PackController::class);
 route::get('/postMaterias',[MateriaController::class,'indexPost']);
