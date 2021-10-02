@@ -19,12 +19,8 @@ class MateriaController extends Controller
         $materias=Materia::all();
         return view('materia.index',compact('materias'));
     }
-
-
-    
     public function indexPost(Request $request){
         $materias = DB::table('materias')->where('id_semestre', $request->idSemestre)->get();
-        dd($request->idSemestre);
         // $materias = Materia::paginate(5);
         if ($request->ajax()){
             $view =view('materiaPost.dataMateria',compact('materias'))->render();
