@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\DocenteController;
+use App\Http\Controllers\MateriaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('docentes',DocenteController::class);
+Route::resource('materias',MateriaController::class);

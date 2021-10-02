@@ -14,7 +14,8 @@ class MateriaController extends Controller
      */
     public function index()
     {
-        //
+        $materias=Materia::all();
+        return view('materia.index',compact('materias'));
     }
 
     /**
@@ -24,7 +25,7 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        //
+        return view('materia.create');
     }
 
     /**
@@ -35,7 +36,13 @@ class MateriaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        date_default_timezone_set("America/La_Paz");
+        $materias=Materia::create([
+            'id_semestre'=>request('id_semestre'),
+            'nombre'=>request('nombre'),
+            'sigla'=>request('sigla'),
+        ]);
+        return redirect()->route('materias.index');
     }
 
     /**
@@ -46,7 +53,7 @@ class MateriaController extends Controller
      */
     public function show(Materia $materia)
     {
-        //
+        return view('materia.show',compact ('materia'));
     }
 
     /**
@@ -57,7 +64,7 @@ class MateriaController extends Controller
      */
     public function edit(Materia $materia)
     {
-        //
+        return view('materia.edit',compact('materia'));
     }
 
     /**
@@ -69,7 +76,13 @@ class MateriaController extends Controller
      */
     public function update(Request $request, Materia $materia)
     {
-        //
+        date_default_timezone_set("America/La_Paz");
+        $materia->id_semestre=$request->id_semestre;
+        $materia->nombre=$request->nombre;
+        $materia->sigla=$request->sigla;
+        $materia->save();
+
+        return redirect()->route('materias.index');
     }
 
     /**
@@ -80,6 +93,7 @@ class MateriaController extends Controller
      */
     public function destroy(Materia $materia)
     {
-        //
+        $materia->delete();
+        return redirect()->route('materias.index');
     }
 }

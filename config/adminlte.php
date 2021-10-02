@@ -269,7 +269,7 @@ return [
                 ],
                 [
                     'text' => 'Materia',
-                    'url'  => '#',
+                    'url'  => 'materias',
                 ],
                 [
                     'text' => 'Docente',
