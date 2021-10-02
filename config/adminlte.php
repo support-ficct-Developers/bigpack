@@ -265,7 +265,7 @@ return [
             'submenu' => [
                 [
                     'text' => 'Pack',
-                    'url'  => '#',
+                    'url'  => 'packs',
                 ],
                 [
                     'text' => 'Materia',

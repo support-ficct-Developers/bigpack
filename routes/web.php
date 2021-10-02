@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\MateriaController;
+use App\Http\Controllers\PackController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::resource('docentes',DocenteController::class);
 Route::resource('materias',MateriaController::class);
+Route::resource('packs',PackController::class);

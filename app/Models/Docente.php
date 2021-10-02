@@ -10,4 +10,8 @@ class Docente extends Model
     use HasFactory;
     protected $table = "docentes";
     protected $fillable = ['nombre'];
+
+    public function pack(){
+        return $this->hasMany('App\Models\Pack');
+    }
 }

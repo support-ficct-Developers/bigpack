@@ -15,10 +15,10 @@ class CreatePacksTable extends Migration
     {
         Schema::create('packs', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_semestre')->nullable();
+            $table->unsignedBigInteger('id_materia')->nullable();
             $table->unsignedBigInteger('id_docente')->nullable();
             $table->string('link');
-            $table->foreign('id_semestre')->references('id')->on('semestres')->onDelete('set null')->onUpdate('cascade');
+            $table->foreign('id_materia')->references('id')->on('materias')->onDelete('set null')->onUpdate('cascade');
             $table->foreign('id_docente')->references('id')->on('docentes')->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
         });

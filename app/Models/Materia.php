@@ -14,4 +14,9 @@ class Materia extends Model
     public function semetre(){
         return $this->belongsTo('App\Models\Semestre', 'id_semestre');
     }
+
+    public function pack(){
+        return $this->hasMany('App\Models\Pack');
+    }
+
 }

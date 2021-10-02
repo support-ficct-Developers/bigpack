@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pack;
+use App\Models\Materia;
+use App\Models\Docente;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PackController extends Controller
 {
@@ -14,7 +17,8 @@ class PackController extends Controller
      */
     public function index()
     {
-        //
+        $packs=Pack::all();
+        return view('pack.index',compact('packs'));
     }
 
     /**
@@ -24,7 +28,9 @@ class PackController extends Controller
      */
     public function create()
     {
-        //
+        $materias = DB::table('materias')->get();
+        $docentes = DB::table('docentes')->get();
+        return view('pack.create',['materias'=>$materias],['docentes'=>$docentes]);
     }
 
     /**
@@ -35,7 +41,13 @@ class PackController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        date_default_timezone_set("America/La_Paz");
+        $pack=Pack::create([
+            'id_materia'=>request('id_materia'),
+            'id_docente'=>request('id_docente'),
+            'link'=>request('link'),
+        ]);
+        return redirect()->route('packs.index');
     }
 
     /**
@@ -46,7 +58,7 @@ class PackController extends Controller
      */
     public function show(Pack $pack)
     {
-        //
+        return view('pack.show',compact ('pack'));
     }
 
     /**
@@ -57,7 +69,9 @@ class PackController extends Controller
      */
     public function edit(Pack $pack)
     {
-        //
+        $materia = DB::table('materias')->get();
+        $docente = DB::table('docentes')->get();
+        return view('pack.edit',compact('pack'),['materias'=>$materias],['docentes'=>$docentes]);
     }
 
     /**
@@ -69,7 +83,13 @@ class PackController extends Controller
      */
     public function update(Request $request, Pack $pack)
     {
-        //
+        date_default_timezone_set("America/La_Paz");
+        $pack->id_materia=$request->id_materia;
+        $pack->id_docente=$request->id_docente;
+        $pack->link=$request->link;
+        $pack->save();
+
+        return redirect()->route('packs.index');
     }
 
     /**
@@ -80,6 +100,7 @@ class PackController extends Controller
      */
     public function destroy(Pack $pack)
     {
-        //
+        $pack->delete();
+        return redirect()->route('packs.index');
     }
 }
