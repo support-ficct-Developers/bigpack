@@ -61,12 +61,25 @@
             </div>
 
             <div class="card dashboard-card" role="listitem" data-region="course-contend">
-                <div class="card.img dashboard-card-img" style="color:#30ceae">
-                    <img src="{{asset('imagenes/logo.png')}}" width="150" height="150">
-                </div>
-                <div class="card-body pr-1 course-info-container" >
-                    <h4>5to Semestre</h4>
-                </div>
+                <a href="">
+                    <div class="card.img dashboard-card-img" style="color:#30ceae">
+                        <img src="{{asset('imagenes/logo.png')}}" width="150" height="150">
+                    </div>
+                    <div class="card-body pr-1 course-info-container" >
+                        <h4>4to Semestre</h4>
+                    </div>
+                </a>
+            </div>
+
+            <div class="card dashboard-card" role="listitem" data-region="course-contend">
+                <a href="">
+                    <div class="card.img dashboard-card-img" style="color:#30ceae">
+                        <img src="{{asset('imagenes/logo.png')}}" width="150" height="150">
+                    </div>
+                    <div class="card-body pr-1 course-info-container" >
+                        <h4>5to Semestre</h4>
+                    </div>
+                </a>
             </div>
         </div>
 	
