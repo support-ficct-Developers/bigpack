@@ -10,9 +10,9 @@
   <div class="card">
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-        {{-- @can('docentes.create') --}}
+        @can('docentes.create')
           <a class="btn btn-primary btb-sm" href="{{url('/docentes/create')}}">Registrar docentes</a>    
-        {{-- @endcan --}}
+        @endcan
     </div>
   </div>
 

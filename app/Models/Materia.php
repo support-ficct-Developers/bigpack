@@ -10,4 +10,8 @@ class Materia extends Model
     use HasFactory;
     protected $table = "materias";
     protected $fillable = ['nombre','sigla'];
+
+    public function semetre(){
+        return $this->belongsTo('App\Models\Semestre', 'id_semestre');
+    }
 }
