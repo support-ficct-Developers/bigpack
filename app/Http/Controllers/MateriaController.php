@@ -6,6 +6,7 @@ use App\Models\Materia;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+
 class MateriaController extends Controller
 {
     /**
@@ -19,8 +20,12 @@ class MateriaController extends Controller
         return view('materia.index',compact('materias'));
     }
 
+
+    
     public function indexPost(Request $request){
-        $materias =Materia::paginate(5);
+        $materias = DB::table('materias')->where('id_semestre', $request->idSemestre)->get();
+        dd($request->idSemestre);
+        // $materias = Materia::paginate(5);
         if ($request->ajax()){
             $view =view('materiaPost.dataMateria',compact('materias'))->render();
             return response()->json(['html'=>$view]);
@@ -35,8 +40,7 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        $semestres = DB::table('semestres')->get();
-        return view('materia.create',['semestres'=>$semestres]);
+        return view('materia.create');
     }
 
     /**
@@ -64,9 +68,15 @@ class MateriaController extends Controller
      */
     public function show(Materia $materia)
     {
+        
         return view('materia.show',compact ('materia'));
     }
 
+    public function show2(Request $request)
+    {
+        $materias = DB::table('materias')->where('id_semestre',$request)->get();
+        return view('materia.index',compact('materias'));
+    }
     /**
      * Show the form for editing the specified resource.
      *
@@ -75,8 +85,7 @@ class MateriaController extends Controller
      */
     public function edit(Materia $materia)
     {
-        $semestres = DB::table('semestres')->get();
-        return view('materia.edit',compact('materia'),['semestres'=>$semestres]);
+        return view('materia.edit',compact('materia'));
     }
 
     /**

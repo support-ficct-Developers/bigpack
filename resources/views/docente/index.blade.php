@@ -10,9 +10,9 @@
   <div class="card">
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-        @can('docentes.create')
+        {{-- @can('docentes.create') --}}
           <a class="btn btn-primary btb-sm" href="{{url('/docentes/create')}}">Registrar docentes</a>    
-        @endcan
+        {{-- @endcan --}}
     </div>
   </div>
 
@@ -36,18 +36,18 @@
                   @csrf
                   @method('delete')
                     {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-                    @can('docentes.show') 
+                    {{-- @can('docentes.show')  --}}
                     <a  class="btn btn-primary btn-sm" href="{{route('docentes.show',$docente)}}">Ver</a>  
-                    @endcan
+                    {{-- @endcan --}}
 
-                    @can('docentes.edit')
+                    {{-- @can('docentes.edit') --}}
                       <a class="btn btn-info btn-sm" href="{{route('docentes.edit',$docente)}}">Editar</a>                 
-                    @endcan
+                    {{-- @endcan --}}
 
-                    @can('docentes.destroy')
+                    {{-- @can('docentes.destroy') --}}
                     <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
                     value="Borrar">Eliminar</button>
-                    @endcan  
+                    {{-- @endcan   --}}
 
                 </form>
               </td>    
