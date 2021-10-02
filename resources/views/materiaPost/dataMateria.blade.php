@@ -7,7 +7,7 @@
             <p>Sigla: {{$materia->sigla}}</p>
             <p>Semestre: {{DB::table('semestres')->where('id',$materia->id_semestre)->value('nombre')}}</p>
             <div class="text-center">
-                <a href="{{url('/postPacks')}}"class="btn btn-primary text-white btn-sm">Ver Packs</a>
+                <a href="{{route('postPacks',$materia->id)}}"class="btn btn-primary text-white btn-sm">Ver Packs</a>
             </div>
         </div>
     </div>

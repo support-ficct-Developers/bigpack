@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Semestre;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SemestreController extends Controller
 {
@@ -14,8 +15,19 @@ class SemestreController extends Controller
      */
     public function index()
     {
-        //
+        $semestres = Semestre::all();
+        return view('semestre.index',compact('semestres'));
     }
+    public function indexPost()
+    {
+        return view('home');
+    }
+
+    // public function index1(Request $request)
+    // {
+    //     $materias = DB::table('materias')->where(id_semestre,$request)->get();
+    //     return view('materia.index',compact('materias'));
+    // }
 
     /**
      * Show the form for creating a new resource.
@@ -44,11 +56,16 @@ class SemestreController extends Controller
      * @param  \App\Models\Semestre  $semestre
      * @return \Illuminate\Http\Response
      */
-    public function show(Semestre $semestre)
+    public function show()
     {
-        //
+        //$materias = DB::table('materias')->where(id_semestre,1)->get();
+        return view('materia.show2',compact('materias'));
     }
-
+    public function show2(Request $request)
+    {
+        $materias = DB::table('materias')->where('id_semestre',$request)->get();
+        return view('materia.index',compact('materias'));
+    }
     /**
      * Show the form for editing the specified resource.
      *

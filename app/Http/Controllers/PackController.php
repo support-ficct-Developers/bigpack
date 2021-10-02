@@ -20,8 +20,10 @@ class PackController extends Controller
         $packs=Pack::all();
         return view('pack.index',compact('packs'));
     }
-    public function indexPost(Request $request){
-        $packs =Pack::paginate(5);
+    public function indexPost(Request $request, $idMateria){
+        $packs = DB::table('packs')->where('id_materia',$idMateria)->get();
+
+        // $packs =Pack::paginate(5);
         if ($request->ajax()){
             $view =view('packPost.dataPack',compact('packs'))->render();
             return response()->json(['html'=>$view]);
