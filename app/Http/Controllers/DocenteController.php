@@ -14,8 +14,9 @@ class DocenteController extends Controller
      */
     public function index()
     {
-        //
-    }
+        $docentes = Docente::all();
+        return view('docente.index',compact('docentes'));
+ }
 
     /**
      * Show the form for creating a new resource.
@@ -24,7 +25,7 @@ class DocenteController extends Controller
      */
     public function create()
     {
-        //
+        return view('docente.create');
     }
 
     /**
@@ -35,7 +36,18 @@ class DocenteController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        date_default_timezone_set("America/La_Paz");
+        $docentes=Docente::create([
+            'nombre'=>request('nombre'),
+ 
+        ]);
+
+        activity()->useLog('Docente')->log('Nuevo')->subject();
+        $lastActivity = Activity::all()->last();
+        $lastActivity->subject_id = Docente::all()->last()->id;
+        $lastActivity->save();
+
+        return redirect()->route('docentes.index');
     }
 
     /**
@@ -46,7 +58,7 @@ class DocenteController extends Controller
      */
     public function show(Docente $docente)
     {
-        //
+        return view('docente.show',compact ('docente'));
     }
 
     /**
@@ -57,7 +69,7 @@ class DocenteController extends Controller
      */
     public function edit(Docente $docente)
     {
-        //
+        return view('docente.edit',compact('docente'));
     }
 
     /**
@@ -69,7 +81,16 @@ class DocenteController extends Controller
      */
     public function update(Request $request, Docente $docente)
     {
-        //
+        date_default_timezone_set("America/La_Paz");
+        $docente -> nombre = $request -> nombre;
+        $docente -> save();
+
+        activity()->useLog('Docente')->log('Editar')->subject();
+        $lastActivity = Activity::all()->last();
+        $lastActivity->subject_id = $docente->id;
+        $lastActivity->save();
+
+        return redirect()->route('clientes.index');
     }
 
     /**
@@ -80,6 +101,14 @@ class DocenteController extends Controller
      */
     public function destroy(Docente $docente)
     {
-        //
+        $docente->delete();
+
+        date_default_timezone_set("America/La_Paz");
+        activity()->useLog('Docente')->log('Eliminar')->subject();
+        $lastActivity = Activity::all()->last();
+        $lastActivity->subject_id = $docente->id;
+        $lastActivity->save();
+
+        return redirect()->route('clientes.index');
     }
 }
