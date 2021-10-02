@@ -39,13 +39,8 @@ class DocenteController extends Controller
         date_default_timezone_set("America/La_Paz");
         $docentes=Docente::create([
             'nombre'=>request('nombre'),
- 
         ]);
 
-        activity()->useLog('Docente')->log('Nuevo')->subject();
-        $lastActivity = Activity::all()->last();
-        $lastActivity->subject_id = Docente::all()->last()->id;
-        $lastActivity->save();
 
         return redirect()->route('docentes.index');
     }
@@ -85,12 +80,7 @@ class DocenteController extends Controller
         $docente -> nombre = $request -> nombre;
         $docente -> save();
 
-        activity()->useLog('Docente')->log('Editar')->subject();
-        $lastActivity = Activity::all()->last();
-        $lastActivity->subject_id = $docente->id;
-        $lastActivity->save();
-
-        return redirect()->route('clientes.index');
+        return redirect()->route('docentes.index');
     }
 
     /**
@@ -103,12 +93,6 @@ class DocenteController extends Controller
     {
         $docente->delete();
 
-        date_default_timezone_set("America/La_Paz");
-        activity()->useLog('Docente')->log('Eliminar')->subject();
-        $lastActivity = Activity::all()->last();
-        $lastActivity->subject_id = $docente->id;
-        $lastActivity->save();
-
-        return redirect()->route('clientes.index');
+        return redirect()->route('docentes.index');
     }
 }

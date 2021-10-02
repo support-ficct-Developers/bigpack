@@ -10,9 +10,9 @@
   <div class="card">
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-        @can('docentes.create')
+        {{-- @can('docentes.create') --}}
           <a class="btn btn-primary btb-sm" href="{{url('/docentes/create')}}">Registrar docentes</a>    
-        @endcan
+        {{-- @endcan --}}
     </div>
   </div>
 
@@ -32,16 +32,16 @@
             <tr>
               <td>{{$docente->nombre}}</td>
               <td >
-                <form  action="{{route('docentes.destroy',$docentes)}}" method="post">
+                <form  action="{{route('docentes.destroy',$docente)}}" method="post">
                   @csrf
                   @method('delete')
                     {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
                     @can('docentes.show') 
-                    <a  class="btn btn-primary btn-sm" href="{{route('docentes.show',$docentes)}}">Ver</a>  
+                    <a  class="btn btn-primary btn-sm" href="{{route('docentes.show',$docente)}}">Ver</a>  
                     @endcan
 
                     @can('docentes.edit')
-                      <a class="btn btn-info btn-sm" href="{{route('docentes.edit',$docentes)}}">Editar</a>                 
+                      <a class="btn btn-info btn-sm" href="{{route('docentes.edit',$docente)}}">Editar</a>                 
                     @endcan
 
                     @can('docentes.destroy')
