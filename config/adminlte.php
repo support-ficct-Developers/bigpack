@@ -45,8 +45,8 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+    'logo' => '<b>SUPPORT</b>',
+    'logo_img' => 'imagenes/logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -246,6 +246,11 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+        [
+            'text'       => 'INICIO',
+            'icon' => 'fas fa-home',
+            'url'        => '/home',
+        ],
     
         ['header' => 'account_settings'],
         [
@@ -261,7 +266,7 @@ return [
         ['header' => 'ADMINISTRAR'],
         [
             'text'    => 'Agregar',
-            'icon'    => 'fas fa-fw fa-share',
+            'icon'    => 'fas fa-plus',
             'submenu' => [
                 [
                     'text' => 'Pack',
@@ -280,12 +285,12 @@ return [
         ['header' => 'CONTACTANOS'],
         [
             'text'       => 'Facebook',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'icon' => 'fab fa-facebook',
+            'url'        => 'https://www.facebook.com/supportUAGRM',
         ],
         [
             'text'       => 'WhatsApp',
-            'icon_color' => 'green',
+            'icon' => 'fab fa-whatsapp',
             'url'        => '#',
         ],
         

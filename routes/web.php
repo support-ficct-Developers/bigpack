@@ -27,3 +27,4 @@ Route::resource('docentes',DocenteController::class);
 Route::resource('materias',MateriaController::class);
 Route::resource('packs',PackController::class);
 route::get('/postMaterias',[MateriaController::class,'indexPost']);
+route::get('/postPacks',[PackController::class,'indexPost']);

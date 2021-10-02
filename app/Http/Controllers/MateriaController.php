@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Materia;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MateriaController extends Controller
 {
@@ -34,7 +35,8 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        return view('materia.create');
+        $semestres = DB::table('semestres')->get();
+        return view('materia.create',['semestres'=>$semestres]);
     }
 
     /**
@@ -73,7 +75,8 @@ class MateriaController extends Controller
      */
     public function edit(Materia $materia)
     {
-        return view('materia.edit',compact('materia'));
+        $semestres = DB::table('semestres')->get();
+        return view('materia.edit',compact('materia'),['semestres'=>$semestres]);
     }
 
     /**

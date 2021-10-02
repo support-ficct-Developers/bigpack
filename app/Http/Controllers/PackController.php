@@ -20,6 +20,14 @@ class PackController extends Controller
         $packs=Pack::all();
         return view('pack.index',compact('packs'));
     }
+    public function indexPost(Request $request){
+        $packs =Pack::paginate(5);
+        if ($request->ajax()){
+            $view =view('packPost.dataPack',compact('packs'))->render();
+            return response()->json(['html'=>$view]);
+        }
+        return view('packPost.postPack',compact('packs'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -71,7 +79,7 @@ class PackController extends Controller
     {
         $materia = DB::table('materias')->get();
         $docente = DB::table('docentes')->get();
-        return view('pack.edit',compact('pack'),['materias'=>$materias],['docentes'=>$docentes]);
+        return view('pack.edit',compact('pack'),['materias'=>$materia],['docentes'=>$docente]);
     }
 
     /**
