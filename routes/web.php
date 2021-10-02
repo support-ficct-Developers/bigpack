@@ -26,3 +26,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('docentes',DocenteController::class);
 Route::resource('materias',MateriaController::class);
 Route::resource('packs',PackController::class);
+route::get('/postMaterias',[MateriaController::class,'indexPost']);
