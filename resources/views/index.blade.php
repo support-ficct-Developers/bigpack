@@ -3,6 +3,10 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
+
+@stop
+
+@section('content')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +18,6 @@
     <link rel="shortcut icon" href="imagenes/logo.png" />
     <title>Support</title>
 </head>
-@stop
-
-@section('content')
 
 <body>
     <!--==================== HEADER ====================-->
@@ -192,8 +193,8 @@
         <div class="footer__content">
         <div class="footer_container container grid">
             <div>
-                <h1 class="footer_title">Support <!-- <img src="./img/logo.png" alt="" class="footer__img"> --></h1>
-                <h1 class="footer_title">Aprende+ <!-- <img src="./img/logo.png" alt="" class="footer__img"> --></h1>
+                <h1 class="footer_title">Support <!-- <img src="imagenes/logo.png" alt="" class="footer__img"> --></h1>
+                <h1 class="footer_title">Aprende+ <!-- <img src="imagenes/logo.png" alt="" class="footer__img"> --></h1>
                 <span class="footer_subtitle">#Estamos_para_ayudarte <br> #Cuenta_con_nosotros</span>            </div>
             <ul class="footer_links">
                 <li>
