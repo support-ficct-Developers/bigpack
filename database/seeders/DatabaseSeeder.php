@@ -118,5 +118,11 @@ class DatabaseSeeder extends Seeder
             'id_docente'=>'4',
             'link'=> 'https://herllo'
         ]);
+
+        Pack::create([
+            'id_materia'=> '1',
+            'id_docente'=>'1',
+            'link'=> 'https://drive.google.com/drive/folders/1tNjedTxh9N0B0L3uXbjjGhuOZ6Yjksx5?usp=sharing'
+        ]);
     }
 }
