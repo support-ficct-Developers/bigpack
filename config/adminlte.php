@@ -229,18 +229,18 @@ return [
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
         [
             'type'         => 'fullscreen-widget',
-            'topnav_right' => true,
+            'topnav_right' => false,
         ],
 
         // Sidebar items:
-        [
+        /* [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
-        ],
+        ], */
         [
             'text' => 'blog',
             'url'  => 'admin/blog',
@@ -253,7 +253,7 @@ return [
             // 'can' => 'admin.home' //solo pueden acceder los que tengan ese permiso
         ],
     
-        ['header' => 'account_settings'],
+        /* ['header' => 'account_settings'],
         [
             'text' => 'profile',
             'url'  => 'admin/settings',
@@ -263,11 +263,16 @@ return [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
+        ], */
+
+        ['header' => 'ADMINISTRAR',
+        'can' => 'packs.index',
         ],
-        ['header' => 'ADMINISTRAR'],
+
         [
             'text'    => 'Agregar',
             'icon'    => 'fas fa-plus',
+            'can' => 'packs.index',
             'submenu' => [
                 [
                     'text' => 'Pack',
@@ -285,6 +290,14 @@ return [
 
             ],
         ],
+        ['header' => 'ACCESOS RAPIDOS'],
+        [
+            'text' => 'Semestres',
+            'url'  => '',
+            'icon' => 'fas fa-fw fa-user',
+        ],
+        
+
         ['header' => 'CONTACTANOS'],
         [
             'text'       => 'Facebook',

@@ -82,9 +82,9 @@ class PackController extends Controller
      */
     public function edit(Pack $pack)
     {
-        $materia = DB::table('materias')->get();
-        $docente = DB::table('docentes')->get();
-        return view('pack.edit',compact('pack'),['materias'=>$materia],['docentes'=>$docente]);
+        $materias = DB::table('materias')->get();
+        $docentes = DB::table('docentes')->get();
+        return view('pack.edit',compact('pack','materias','docentes'));
     }
 
     /**

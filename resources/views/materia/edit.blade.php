@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Autos')
+@section('title', 'Materia')
 
 @section('content_header')
     <h1>Editar Materia</h1>
@@ -9,14 +9,14 @@
 @section('content')
 <div class="card">
     <div class="card-body">
-        <form method="post" action="{{route('marcas.update',$materia)}}" novalidate >
+        <form method="post" action="{{route('materias.update',$materia)}}" novalidate >
 
             @csrf
             @method('PATCH')
 
             <h5>Semestre:</h5>
-            <select name = "id_semestre" id="idMarca" class="form-control" onchange="habilitar()" >
-                <option value="nulo">Seleccione la marca</option>
+            <select name = "id_semestre" id="id_semestre" class="form-control" onchange="habilitar()" >
+                <option value="{{$materia->id_semestre}}">{{DB::table('semestres')->where('id',$materia->id_semestre)->value('nombre')}}</option>
                     @foreach ($semestres as $semestre)
                         <option value="{{$semestre->id}}">
                             {{$semestre->nombre}}
@@ -24,7 +24,7 @@
                     @endforeach
             </select>
             
-            @error('idMarca')
+            @error('id_semestre')
             <p>DEBE INGRESAR BIEN EL ID</p>
             @enderror
             

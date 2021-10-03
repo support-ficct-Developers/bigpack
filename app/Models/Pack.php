@@ -9,7 +9,7 @@ class Pack extends Model
 {
     use HasFactory;
     protected $table = "packs";
-    protected $fillable = ['nombre'];
+    protected $fillable = ['id_materia','id_docente','link'];
 
     public function materia(){
         return $this->belongsTo('App\Models\Materia', 'id_materia');

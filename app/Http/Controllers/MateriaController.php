@@ -39,7 +39,8 @@ class MateriaController extends Controller
      */
     public function create()
     {
-        return view('materia.create');
+        $semestres = DB::table('semestres')->get();
+        return view('materia.create',compact('semestres'));
     }
 
     /**
@@ -84,7 +85,8 @@ class MateriaController extends Controller
      */
     public function edit(Materia $materia)
     {
-        return view('materia.edit',compact('materia'));
+        $semestres=DB::table('semestres')->get();
+        return view('materia.edit',compact('materia','semestres'));
     }
 
     /**

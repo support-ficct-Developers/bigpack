@@ -45,7 +45,7 @@
             @error('link')
                 <p>DEBE INGRESAR UN LINK</p>
             @enderror
-           
+            
             <br>
             <br>
 

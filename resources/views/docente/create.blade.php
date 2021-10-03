@@ -3,7 +3,7 @@
 @section('title', 'Docentes')
 
 @section('content_header')
-    <h1>Registrar Cliente</h1>
+    <h1>Registrar Docente</h1>
 @stop
 
 @section('content')
@@ -18,7 +18,7 @@
                 <p>DEBE INGRESAR BIEN SU NOMBRE</p>
             @enderror
 
-         </div>
+         
             
             <br>
             <br>
@@ -27,9 +27,8 @@
 
             <a href="{{route('docentes.index')}}"class="btn btn-warning text-white btn-sm">Volver</a>
         </form>
-
     </div>
-</div>
+    </div>
 @stop
 
 @section('css')

@@ -22,6 +22,7 @@
         <thead>
           <tr>
             <th scope="col">Nombre Completo</th>
+            <th scope="col" width="20%">Acciones</th>
             {{-- <th colspan=""></th> --}}
           </tr>
         </thead>

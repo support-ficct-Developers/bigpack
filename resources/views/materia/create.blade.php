@@ -12,26 +12,34 @@
         <form method="post" action="{{route('materias.store')}}" novalidate >
 
             <h5>Semestre:</h5>
-            <select name = "id_semestre" id="idMarca" class="form-control" onchange="habilitar()" >
+            <select name = "id_semestre" id="id_semestre" class="form-control" onchange="habilitar()" >
                 <option value="nulo">Seleccione el semestre</option>
                     @foreach ($semestres as $semestre)
                         <option value="{{$semestre->id}}">
-                            {{$marca->nombre}}
+                            {{$semestre->nombre}}
                         </option>
                     @endforeach
             </select>
-
+ 
            
-            @error('idMarca')
+            @error('id_semestre')
                 <p>DEBE INGRESAR BIEN EL ID DEL SEMESTRE</p>
             @enderror
 
             @csrf
+            <h5>Nombre:</h5>
+            <input type="text"  name="nombre"  class="focus border-primary  form-control">
+            @error('nombre')
+                <p>DEBE INGRESAR BIEN EL NOMBRE</p>
+            @enderror
+
             <h5>Sigla:</h5>
             <input type="text"  name="sigla"  class="focus border-primary  form-control">
             @error('sigla')
                 <p>DEBE INGRESAR BIEN LA SIGLA</p>
             @enderror
+
+            
            
             <br>
             <br>

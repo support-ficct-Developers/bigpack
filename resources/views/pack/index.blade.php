@@ -25,7 +25,7 @@
             <th scope="col">Materia</th>
             <th scope="col">Docente</th>
             <th scope="col">Link</th>
-            <th scope="col" width="0%">Acciones</th>
+            <th scope="col" width="15%">Acciones</th>
             {{-- <th colspan=""></th> --}}
           </tr>
         </thead>
@@ -35,8 +35,8 @@
           @foreach ($packs as $pack)
             <tr>
               <td>{{$pack->id}}</td>
-              <td>{{$pack->materia->nombre}}</td>
-              <td>{{$pack->docente->nombre}}</td>
+              <td>{{DB::table('materias')->where('id',$pack->id_materia)->value('nombre')}}</td>
+              <td>{{DB::table('docentes')->where('id',$pack->id_docente)->value('nombre')}}</td>
               <td>{{$pack->link}}</td>
               <td >
                 <form  action="{{route('packs.destroy',$pack)}}" method="post">

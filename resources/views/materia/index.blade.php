@@ -11,7 +11,7 @@
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
         @can('materias.create')
-          <a class="btn btn-primary btb-sm" href="{{route('materias.create')}}">Registrar Cliente</a>    
+          <a class="btn btn-primary btb-sm" href="{{route('materias.create')}}">Registrar Materia</a>    
         @endcan
     </div>
   </div>
@@ -22,10 +22,10 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Semestre</th>
+            <th scope="col" width="5%">Semestre</th>
             <th scope="col">Nombre</th>
             <th scope="col">Sigla</th>
-            <th scope="col" width="0%">Acciones</th>
+            <th scope="col" width="15%">Acciones</th>
             {{-- <th colspan=""></th> --}}
           </tr>
         </thead>
