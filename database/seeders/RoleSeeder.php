@@ -36,6 +36,16 @@ class RoleSeeder extends Seeder
         Permission::create(['name'=>'packs.create'])->syncRoles([ $role1, $role2 ]);
         Permission::create(['name'=>'packs.edit'])->syncRoles([$role1, $role2 ]);
         Permission::create(['name'=>'packs.destroy'])->syncRoles([$role1]);
+
+        Permission::create(['name'=>'docentes.index'])->syncRoles([$role1, $role2 ]);
+        Permission::create(['name'=>'docentes.create'])->syncRoles([$role1, $role2 ]);
+        Permission::create(['name'=>'docentes.edit'])->syncRoles([$role1, $role2 ]);
+        Permission::create(['name'=>'docentes.destroy'])->syncRoles([$role1]);
+        
+        Permission::create(['name'=>'semestres.index'])->syncRoles([$role1, $role2 ]);
+        Permission::create(['name'=>'semestres.create'])->syncRoles([$role1, $role2 ]);
+        Permission::create(['name'=>'semestres.edit'])->syncRoles([$role1, $role2 ]);
+        Permission::create(['name'=>'semestres.destroy'])->syncRoles([$role1]);
         
     }
 }
