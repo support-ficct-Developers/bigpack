@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\DB;
 
 class SemestreController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
+        $this->middleware('can:semestres.index')->only('index');
+        $this->middleware('can:semestres.create')->only('create', 'store');
+        $this->middleware('can:semestres.edit')->only('edit', 'update');
+        $this->middleware('can:semestres.destroy')->only('destroy');
+    }
+
     public function index()
     {
         $semestres = Semestre::all();

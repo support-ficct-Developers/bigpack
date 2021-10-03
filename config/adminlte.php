@@ -250,6 +250,7 @@ return [
             'text'       => 'INICIO',
             'icon' => 'fas fa-home',
             'url'        => '/postSemestres',
+            // 'can' => 'admin.home' //solo pueden acceder los que tengan ese permiso
         ],
     
         ['header' => 'account_settings'],
@@ -271,6 +272,7 @@ return [
                 [
                     'text' => 'Pack',
                     'url'  => 'packs',
+                    'can' => 'packs.index'
                 ],
                 [
                     'text' => 'Materia',

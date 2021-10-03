@@ -7,11 +7,14 @@ use Illuminate\Http\Request;
 
 class DocenteController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
+        $this->middleware('can:docentes.index')->only('index');
+        $this->middleware('can:docentes.create')->only('create', 'store');
+        $this->middleware('can:docentes.edit')->only('edit', 'update');
+        $this->middleware('can:docentes.destroy')->only('destroy');
+    }
+
     public function index()
     {
         $docentes = Docente::all();

@@ -10,11 +10,14 @@ use Illuminate\Support\Facades\DB;
 
 class PackController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
+        $this->middleware('can:packs.index')->only('index');
+        $this->middleware('can:packs.create')->only('create', 'store');
+        $this->middleware('can:packs.edit')->only('edit', 'update');
+        $this->middleware('can:packs.destroy')->only('destroy');
+    }
+
     public function index()
     {
         $packs=Pack::all();
