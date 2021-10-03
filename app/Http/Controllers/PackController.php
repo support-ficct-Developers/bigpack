@@ -12,11 +12,12 @@ class PackController extends Controller
 {
     public function __construct()
     {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
-        $this->middleware('can:materias.index')->only('index');
-        $this->middleware('can:materias.create')->only('create', 'store');
-        $this->middleware('can:materias.edit')->only('edit', 'update');
-        $this->middleware('can:materias.destroy')->only('destroy');
+        $this->middleware('can:packs.index')->only('index');
+        $this->middleware('can:packs.create')->only('create', 'store');
+        $this->middleware('can:packs.edit')->only('edit', 'update');
+        $this->middleware('can:packs.destroy')->only('destroy');
     }
+
     public function index()
     {
         $packs=Pack::all();
