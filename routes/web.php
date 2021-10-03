@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('docentes',DocenteController::class)->names('admin.docentes');
+Route::resource('docentes',DocenteController::class);
 Route::resource('materias',MateriaController::class);
 Route::resource('packs',PackController::class);
 Route::resource('semestres',SemestreController::class);
