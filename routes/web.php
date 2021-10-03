@@ -3,6 +3,7 @@ use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\SemestreController;
 use App\Http\Controllers\PackController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,4 +32,4 @@ Route::resource('semestres',SemestreController::class);
 Route::get('/postSemestres',[SemestreController::class,'indexPost']);
 route::get('/postMaterias',[MateriaController::class,'indexPost'])->name('postMaterias');
 route::get('/postPacks/{idMateria}',[PackController::class,'indexPost'])->name('postPacks');
-
+Route::resource('users',UserController::class);
