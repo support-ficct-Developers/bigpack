@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Materia;
+use App\Models\Semestre;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -22,8 +23,9 @@ class MateriaController extends Controller
         $materias=Materia::all();
         return view('materia.index',compact('materias'));
     }
-    public function indexPost(Request $request){
-        $materias = DB::table('materias')->where('id_semestre', $request->idSemestre)->get();
+    public function indexPost(Request $request,Semestre $semestres){
+        dd($semestres()->where('id_semestre',2)->value('id'));
+        $materias = DB::table('materias')->where('id_semestre', $semestres->id)->get();
         // $materias = Materia::paginate(5);
         if ($request->ajax()){
             $view =view('materiaPost.dataMateria',compact('materias'))->render();

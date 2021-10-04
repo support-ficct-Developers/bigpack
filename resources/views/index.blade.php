@@ -72,7 +72,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a>             
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" target="_blank" class="button--link">Ver más</a>             
                     <i class="uil uil-arrow-from-right button_icon" ></i>  
                 </span>
             </div>

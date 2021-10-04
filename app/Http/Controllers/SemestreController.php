@@ -19,7 +19,7 @@ class SemestreController extends Controller
     public function index()
     {
         $semestres = Semestre::all();
-        return view('semestre.index',compact('semestres'));
+        return view('index',compact('semestres'));
     }
     public function indexPost()
     {
