@@ -288,7 +288,7 @@ return [
         [
             'text'    => 'Agregar',
             'icon'    => 'fas fa-plus',
-            'can' => 'packs.index',
+            'can' => 'agregar',
             'submenu' => [
                 [
                     'text' => 'Pack',
@@ -298,10 +298,12 @@ return [
                 [
                     'text' => 'Materia',
                     'url'  => 'materias',
+                    'can' => 'materias.index'
                 ],
                 [
                     'text' => 'Docente',
                     'url'  => 'docentes',
+                    'can' => 'docentes.index'
                 ],
 
             ],
