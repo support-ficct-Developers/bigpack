@@ -271,15 +271,24 @@ return [
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ], */
+        
 
         ['header' => 'ADMINISTRAR',
         'can' => 'packs.index',
         ],
-
+        //Usuarios------------------------------------------------------------------
+        [
+            'text' => 'ADM Usuarios',
+            'url'  => 'users',
+            'icon' => 'fas fa-user-lock',
+            'icon_color'=>'primary',
+            'can' => 'users.index'
+        ],
+        //------------------------------------------------------------------
         [
             'text'    => 'Agregar',
             'icon'    => 'fas fa-plus',
-            'can' => 'packs.index',
+            'can' => 'agregar',
             'submenu' => [
                 [
                     'text' => 'Pack',
@@ -289,10 +298,12 @@ return [
                 [
                     'text' => 'Materia',
                     'url'  => 'materias',
+                    'can' => 'materias.index'
                 ],
                 [
                     'text' => 'Docente',
                     'url'  => 'docentes',
+                    'can' => 'docentes.index'
                 ],
 
             ],
