@@ -1,5 +1,5 @@
 @foreach ($materias as $materia)
-    <div class="card" style="margin-bottom:20px;">
+   <div class="card" style="margin-bottom:20px;">
         <div class="card-header">
             <h3>{{$materia->nombre}}</h3>
         </div>

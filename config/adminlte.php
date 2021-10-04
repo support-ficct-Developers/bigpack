@@ -90,7 +90,7 @@ return [
     'layout_fixed_sidebar' => true,
     'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
-    'layout_dark_mode' => true,
+    'layout_dark_mode' => null,
 
     /*
     |--------------------------------------------------------------------------
@@ -310,13 +310,72 @@ return [
         ],
         ['header' => 'ACCESOS RAPIDOS'],
         [
-            'text' => 'Semestres',
-            'url'  => '',
-            'icon' => 'fas fa-fw fa-user',
+            'text'    => 'Semestres',
+            'icon'    => 'fas fa-building',
+            'submenu' => [
+                [
+                    'text' => 'Semestre 1',
+                    'url'  => 'postMaterias/1',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 2',
+                    'url'  => 'postMaterias/2',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 3',
+                    'url'  => 'postMaterias/3',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 4',
+                    'url'  => 'postMaterias/4',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 5',
+                    'url'  => 'postMaterias/5',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 6',
+                    'url'  => 'postMaterias/6',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 7',
+                    'url'  => 'postMaterias/7',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 8',
+                    'url'  => 'postMaterias/8',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Semestre 9',
+                    'url'  => 'postMaterias/9',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+                [
+                    'text' => 'Electivas',
+                    'url'  => 'postMaterias/10',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
+
+            ],
         ],
+       
         
 
         ['header' => 'CONTACTANOS'],
+        [
+            'text'       => 'Desarrolladores',
+            'icon' => 'fas fa-user-secret',
+            'url'        => '/postSemestres',
+            // 'can' => 'admin.home' //solo pueden acceder los que tengan ese permiso
+        ],
         [
             'text'       => 'Facebook',
             'icon' => 'fab fa-facebook',
@@ -327,6 +386,7 @@ return [
             'icon' => 'fab fa-whatsapp',
             'url'        => '#',
         ],
+        
         
     ],
 

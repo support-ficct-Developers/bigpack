@@ -20,15 +20,13 @@
 </head>
 
 <body>
-    <!--==================== HEADER ====================-->
+   {{--  <!--==================== HEADER ====================-->
     <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav_logo">Support</a>
-            <div class="nav_btns">
-                <i class="uil uil-moon change-theme" id="theme-button"></i>
-            </div>
+            
         </nav>
-    </header>
+    </header> --}}
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
@@ -36,12 +34,14 @@
             <div class="home_container container grid">
                 <div class="home_content grid">
                     <div class="home_social">
+                        <i class="uil uil-moon home_social-icon" id="theme-button"></i>
                         <a href="" target="_blank" class="home_social-icon">
                             <i class="uil uil-telegram-alt"></i>
                         </a>
                         <a href="" target="_blank" class="home_social-icon">
                             <i class="uil uil-whatsapp"></i>
                         </a>
+
                     </div>
                     
                     <div class="home_img">
@@ -53,11 +53,6 @@
                         <p class="home_description">Aqui encontraras los packs de materias de todos los semestres</p>
                     </div>
                 </div>
-                {{--  <div class="home__scroll">
-                    <a href="#semestres" class="home_scroll-button button--flex">
-                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                    </a>
-                </div>  --}}
             </div>
         </section>
     <!--====================Semestres ====================-->
@@ -72,7 +67,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" target="_blank" class="button--link">Ver más</a>             
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a>             
                     <i class="uil uil-arrow-from-right button_icon" ></i>  
                 </span>
             </div>
@@ -84,7 +79,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a> 
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -96,7 +91,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a> 
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -108,7 +103,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a> 
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -120,7 +115,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a> 
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -132,7 +127,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a>  
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -144,7 +139,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a>  
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -156,7 +151,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a>
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a> 
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -168,7 +163,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a> 
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>
@@ -180,7 +175,7 @@
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
-                    <a href="" target="_blank" class="button--link">Ver más</a> 
+                    <a href="{{route('postMaterias',DB::table('semestres')->where('id',1)->value('id'))}}" class="button--link">Ver más</a> 
                     <i class="uil uil-arrow-from-right button_icon" ></i>
                 </span>
             </div>

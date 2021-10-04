@@ -57,13 +57,13 @@
             });
         }
 
-        var page=1;
+      {{--    var page=1;
         $(window).scroll(function(){
             if ($(window).scrollTop() + $(window).height() >= $(document).height()){
                 page++;
                 loadMoreData(page);
             }
-        });
+        });  --}}
     </script>
 </body>
 @stop

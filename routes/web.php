@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('semestres.index');
+    return view('home');
 });
 
 Auth::routes();
