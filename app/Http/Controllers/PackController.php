@@ -59,6 +59,7 @@ class PackController extends Controller
             'id_materia'=>request('id_materia'),
             'id_docente'=>request('id_docente'),
             'link'=>request('link'),
+            'descripcion'=>request('descripcion'),
         ]);
         return redirect()->route('packs.index');
     }
@@ -100,6 +101,7 @@ class PackController extends Controller
         $pack->id_materia=$request->id_materia;
         $pack->id_docente=$request->id_docente;
         $pack->link=$request->link;
+        $pack->descripcion=$request->descripcion;
         $pack->save();
 
         return redirect()->route('packs.index');

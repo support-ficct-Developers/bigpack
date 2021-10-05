@@ -46,6 +46,10 @@
                 <p>DEBE INGRESAR UN LINK</p>
             @enderror
             
+            @csrf
+            <h5>Descripcion:</h5>
+            <input type="text"  name="descripcion"  class="focus border-primary  form-control">
+            
             <br>
             <br>
 

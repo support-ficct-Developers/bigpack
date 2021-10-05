@@ -18,6 +18,7 @@ class CreatePacksTable extends Migration
             $table->unsignedBigInteger('id_materia')->nullable();
             $table->unsignedBigInteger('id_docente')->nullable();
             $table->string('link');
+            $table->string('descripcion')->nullable();
             $table->foreign('id_materia')->references('id')->on('materias')->onDelete('set null')->onUpdate('cascade');
             $table->foreign('id_docente')->references('id')->on('docentes')->onDelete('set null')->onUpdate('cascade');
             $table->timestamps();
