@@ -238,10 +238,6 @@ return [
             'topnav_right' => false,
         ],
 
-        [
-            'text'         => 'search',
-            'topnav_right' => true,
-        ],
 
         // Sidebar items:
         /* [
@@ -386,7 +382,6 @@ return [
             'icon' => 'fab fa-whatsapp',
             'url'        => '#',
         ],
-        
         
     ],
 
