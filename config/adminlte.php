@@ -369,7 +369,7 @@ return [
         [
             'text'       => 'Desarrolladores',
             'icon' => 'fas fa-user-secret',
-            'url'        => '/postSemestres',
+            'url'        => '/developers',
             // 'can' => 'admin.home' //solo pueden acceder los que tengan ese permiso
         ],
         [

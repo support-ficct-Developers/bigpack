@@ -33,3 +33,4 @@ Route::get('/postSemestres',[SemestreController::class,'indexPost']);
 route::get('/postMaterias/{semestres}',[MateriaController::class,'indexPost'])->name('postMaterias');
 route::get('/postPacks/{idMateria}',[PackController::class,'indexPost'])->name('postPacks');
 Route::resource('users',UserController::class);
+Route::get('/developers',[SemestreController::class,'developers']);

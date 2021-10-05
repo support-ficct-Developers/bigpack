@@ -20,9 +20,14 @@ class SemestreController extends Controller
     {
         return view('index');
     }
+
     public function indexPost()
     {
         return view('home');
+    }
+    public function developers()
+    {
+        return view('developer.dev');
     }
 
     // public function index1(Request $request)

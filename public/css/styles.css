@@ -932,3 +932,57 @@ img{
 .section_seme{
     padding: 1rem 0 1rem;
 }
+
+.home_blob{
+    width: 200px;
+    fill: var(--first-color);
+}
+.home_blob-img{
+    width: 170px;
+}
+/* /==================== ABOUT ====================/ */
+.about_img{
+    width: 200px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
+}
+.about_description{
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about_info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about_info-title{
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+.about_info-name{
+    font-size: var(--smaller-font-size);
+}
+
+.about_info-title,
+.about_info-name{
+    display: block;
+    text-align: center;
+}
+.about_buttons{
+    display: flex;
+    justify-content: center;
+}
+.about_container{
+    margin-bottom:var(--mb-2);
+}
+.desa_title{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+.desa_subtitle{
+    font-size: var(--small-font-size);
+}
