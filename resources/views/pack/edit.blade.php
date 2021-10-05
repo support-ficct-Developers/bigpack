@@ -41,7 +41,7 @@
             @error('id_docente')
                 <p>DEBE INGRESAR EL DOCENTE</p>
             @enderror
-                   
+                
             @csrf
             <h5>Sigla:</h5>
             <input type="text"  name="link" value="{{$pack->link}}" class="focus border-primary  form-control">
@@ -50,6 +50,10 @@
                 <p>DEBE INGRESAR UN LINK</p>
             @enderror
 
+            @csrf
+            <h5>Descripcion:</h5>
+            <input type="text"  name="descripcion" value="{{$pack->descripcion}}" class="focus border-primary  form-control">
+            
             <br>
             <br>
 
