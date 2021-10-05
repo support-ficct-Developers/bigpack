@@ -27,7 +27,7 @@ const sr = ScrollReveal({
   reset: true
 });
 sr.reveal(`.home_content, .home__img,
-          .footer__content, .semestres_content`, {
+          .footer__content, .pack_content, .semestres_content`, {
   interval: 200
 })
 
@@ -43,4 +43,15 @@ new Typewriter('#typewriter', {
     loop: true,
     cursor: "|"
   });
-  console.log("Typewriter effect is working!")
+
+  document.addEventListener('mousemove', move);
+function move(e){
+    this.querySelectorAll('.move').forEach(layer =>{
+        const speed = layer.getAttribute('data-speed')
+
+        const x = (window.innerWidth - e.pageX*speed)/120
+        const y = (window.innerHeight - e.pageY*speed)/120
+
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+    })
+}

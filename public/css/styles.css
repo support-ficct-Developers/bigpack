@@ -137,7 +137,7 @@ img{
 
 /*==================== REUSABLE CSS CLASSES ====================*/
 .section{
-    padding: 2rem 0 4 rem;
+    padding: 2rem 0 4rem;
 }
 
 .section_title{
@@ -519,18 +519,35 @@ img{
     color: var(--first-color);
     margin-right: var(--mb-0-25);
 }
+
+.pack_container{
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, 1fr);
+}
+.pack_content{
+    position: relative;
+    background-color: var(--container-color);
+    padding: .5rem .5rem 1.25rem 1.5rem;
+    border-radius: .25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
+    transition: .3s;
+}
+
+.pack_content:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .15);
+}
 /*cuadro de publicaciones*/
 /*==================== posts ====================*/
 .public_container{
     max-width: 200px;
     gap: 1.5rem;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 }
 
 .public_content{
     position: relative;
     background-color: var(--container-color);
-    padding: 3.5rem .5rem 1.25rem 1.5rem;
+    padding: .5rem .5rem 1.25rem 1.5rem;
     border-radius: .25rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
     transition: .3s;
@@ -552,7 +569,6 @@ img{
     margin-bottom: var(--mb-1);
     font-weight: var(--font-medium);
 }
-
 .public_button{
     cursor: pointer;
     font-size: var(--small-font-size);
@@ -912,4 +928,7 @@ img{
     width: 50px;
     align-self: center;
     margin-bottom: var(--mb-0-25);
+}
+.section_seme{
+    padding: 1rem 0 1rem;
 }

@@ -1,9 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Semestres - Materias')
 
 @section('content_header')
-    <p></p>
+    <h2 class="section_title">Materias</h2>
+    <span class="section_subtitle">#EstamosParaAyudarte</span>
 @stop
 
 @section('content')
@@ -11,22 +12,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
-
-    <link rel="shortcut icon" href="imagenes/logo.png" />
 </head>
 
 <body>
+
     <!--==================== MAIN ====================-->
-    {{--  <main class="main">
-        <section class="home section" id="home">  --}}
-            
-       {{--   </section>
-    </main>  --}}
+    <main class="main">
         @include('materiaPost.dataprueba')
-<!--==================== FOOTER ====================-->
+    </main>
+
+    <!--==================== FOOTER ====================-->
 <footer class="footer">
     <div class="footer_bg">
         <div class="footer__content">
@@ -59,16 +54,22 @@
             </div>
         </div>
     </div>
-        <p class="footer_copy">&#169; Fernan. Todos los derechos Reservados</p>
+        <p class="footer_copy">&#169; SUPPORT. Todos los derechos Reservados</p>
     </div>
 </footer>
+<!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup_icon"></i>
+    </a>
 </body>
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 @stop

@@ -25,13 +25,13 @@ class PackController extends Controller
     }
     public function indexPost(Request $request, $idMateria){
         $packs = DB::table('packs')->where('id_materia',$idMateria)->get();
-
+        $materia=DB::table('materias')->where('id',$idMateria)->value('nombre');
         // $packs =Pack::paginate(5);
-        if ($request->ajax()){
+        /* if ($request->ajax()){
             $view =view('packPost.dataPack',compact('packs'))->render();
             return response()->json(['html'=>$view]);
-        }
-        return view('packPost.postPack',compact('packs'));
+        } */
+        return view('packPost.postPack',compact('packs','materia'));
     }
 
     /**

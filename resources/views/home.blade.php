@@ -10,23 +10,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    
-    <!--==================== CSS ====================-->
-    <link rel="stylesheet" href="css/styles.css">
-
-    <link rel="shortcut icon" href="imagenes/logo.png" />
     <title>Support</title>
 </head>
 
 <body>
-   {{--  <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="#" class="nav_logo">Support</a>
-            
-        </nav>
-    </header> --}}
     <!--==================== MAIN ====================-->
     <main class="main">
         <!--==================== HOME ====================-->
@@ -45,7 +32,7 @@
                     </div>
                     
                     <div class="home_img">
-                        <img src="imagenes/logo.png" alt="" class="about_img">
+                        <img src="{{asset('imagenes/logo.png')}}" alt="" data-speed="-2" class="move">
                     </div>
                     <div class="home_data">
                         <h1 class="home_title">Support<br><span class="home__title-color">FICCT</span></h1>
@@ -215,26 +202,27 @@
             </div>
         </div>
     </div>
-        <p class="footer_copy">&#169; Fernan. Todos los derechos Reservados</p>
+        <p class="footer_copy">&#169; SUPPORT. Todos los derechos Reservados</p>
     </div>
 </footer>
         <!--==================== SCROLL TOP ====================-->
         <a href="#" class="scrollup" id="scroll-up">
             <i class="uil uil-arrow-up scrollup_icon"></i>
         </a>
-        <!--  Typewriter CSS Effect -->
-        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-        <!--========== SCROLL REVEAL ==========-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-	<!--==================== MAIN JS ====================-->
-    <script src="./js/main.js"></script>
+
 </body>
 @stop
 
 @section('css')
-    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
 @stop
 
 @section('js')
-    <script> console.log('Hi!'); </script>
+<!--  Typewriter CSS Effect -->
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+<!--========== SCROLL REVEAL ==========-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
 @stop
