@@ -5,12 +5,7 @@
 @section('content_header')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-<!--==================== CSS ====================-->
-    <link rel="stylesheet" href="./css/styles.css">
-
-    <link rel="shortcut icon" href="./img/logo.png" />
+    
     <title>Support</title>
 @stop
 
@@ -46,7 +41,7 @@
                              129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                              -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
          
-                             <image class="home_blob-img" x='12' y='18' xlink:href="./img/IMG_2941.png"/>
+                             <image class="home_blob-img" x='12' y='18' xlink:href="imagenes/IMG_2941.png"/>
                          </g>
                      </svg>                 
          
@@ -59,7 +54,7 @@
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="#" class="button button--flex">
+                         <a href="http://wa.me//+59173665042" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
@@ -81,20 +76,20 @@
                              129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                              -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
          
-                             <image class="home_blob-img" x='12' y='18' xlink:href="./img/Daniel con silla.png"/>
+                             <image class="home_blob-img" x='12' y='18' xlink:href="imagenes/Daniel.png"/>
                          </g>
                      </svg>                 
          
                  </div>
                 <!--  <img src="./img/PicsArt_09-24-12.28.24.jpg" alt="" class="about_img"> -->
                  <div class="about_data">
-                     <h1 class="desa_title">Daniel</h1>
+                     <h1 class="desa_title">Jose Daniel</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
                      <p class="about_description">Estudiante de la Carrera de Ingeniera en Sistemas 
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="#" class="button button--flex">
+                         <a href="http://wa.me//+59169086228" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
@@ -116,7 +111,7 @@
                              129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                              -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
          
-                             <image class="home_blob-img" x='12' y='18' xlink:href="./img/Harold ci.png"/>
+                             <image class="home_blob-img" x='12' y='18' xlink:href="imagenes/Harold ci.png"/>
                          </g>
                      </svg>                 
          
@@ -129,7 +124,7 @@
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="#" class="button button--flex">
+                         <a href="http://wa.me//+59171190290" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
@@ -151,12 +146,11 @@
                              129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
                              -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
          
-                             <image class="home_blob-img" x='12' y='18' xlink:href="./img/Darwin.png"/>
+                             <image class="home_blob-img" x='12' y='18' xlink:href="{{asset('imagenes/darwin.png')}}"/>
                          </g>
                      </svg>                 
          
                  </div>
-                 <!-- <img src="./img/WhatsApp Image 2021-10-05 at 10.06.52.jpeg" alt="" class="about_img"> -->
                  <div class="about_data">
                      <h1 class="desa_title">Darwin</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
@@ -164,7 +158,7 @@
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="#" class="button button--flex">
+                         <a href="http://wa.me//+59172182712" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
@@ -183,6 +177,13 @@
 
 @section('css')
     <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+<!--==================== CSS ====================-->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <link rel="shortcut icon" href="./img/logo.png" />
 @stop
 
 @section('js')

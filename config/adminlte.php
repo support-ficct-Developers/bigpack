@@ -304,7 +304,7 @@ return [
 
             ],
         ],
-        ['header' => 'ACCESOS RAPIDOS'],
+        ['header' => 'ACCESOS RÁPIDOS '],
         [
             'text'    => 'Semestres',
             'icon'    => 'fas fa-building',
@@ -365,22 +365,21 @@ return [
        
         
 
-        ['header' => 'CONTACTANOS'],
+        ['header' => 'CONTACTANOS A+'],
         [
             'text'       => 'Desarrolladores',
             'icon' => 'fas fa-user-secret',
             'url'        => '/developers',
-            // 'can' => 'admin.home' //solo pueden acceder los que tengan ese permiso
         ],
         [
             'text'       => 'Facebook',
             'icon' => 'fab fa-facebook',
-            'url'        => 'https://www.facebook.com/supportUAGRM',
+            'url'        => 'https://www.facebook.com/AprendeMasFICCT',
         ],
         [
-            'text'       => 'WhatsApp',
-            'icon' => 'fab fa-whatsapp',
-            'url'        => '#',
+            'text'       => 'Youtube',
+            'icon' => 'fab fa-youtube',
+            'url'        => 'https://www.facebook.com/AprendeMasFICCT',
         ],
         
     ],

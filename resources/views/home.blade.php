@@ -22,11 +22,11 @@
                 <div class="home_content grid">
                     <div class="home_social">
                         <i class="uil uil-moon home_social-icon" id="theme-button"></i>
-                        <a href="" target="_blank" class="home_social-icon">
-                            <i class="uil uil-telegram-alt"></i>
+                        <a href="https://www.facebook.com/supportUAGRM" target="_blank" class="home_social-icon">
+                            <i class="uil uil-facebook-f"></i>
                         </a>
-                        <a href="" target="_blank" class="home_social-icon">
-                            <i class="uil uil-whatsapp"></i>
+                        <a href="https://www.youtube.com/channel/UCz9Q7IBBcKw78nqP7V54WBA" target="_blank" class="home_social-icon">
+                            <i class="uil uil-youtube"></i>
                         </a>
 
                     </div>
@@ -37,7 +37,7 @@
                     <div class="home_data">
                         <h1 class="home_title">Support<br><span class="home__title-color">FICCT</span></h1>
                         <div id="typewriter"></div>
-                        <p class="home_description">Aqui encontraras los packs de materias de todos los semestres</p>
+                        <p class="home_description">Hola, Aquí encontraras links a repositorios de material de apoyo para todas las materias de la Facultad de Ingeniera en Ciencias de la Computación.</p>
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@
             <div class="semestres_content">
                 <div>
                     <img src="imagenes/logo.png" alt="" class="semestres__img">
-                    <h3 class="semestres_title">Septimo <br> Semestre</h3>
+                    <h3 class="semestres_title">Séptimo  <br> Semestre</h3>
                 </div>
 
                 <span class="button button--flex button--small button--link semestres_button">
@@ -176,29 +176,33 @@
         <div class="footer_container container grid">
             <div>
                 <h1 class="footer_title">Support <!-- <img src="imagenes/logo.png" alt="" class="footer__img"> --></h1>
-                <h1 class="footer_title">Aprende+ <!-- <img src="imagenes/logo.png" alt="" class="footer__img"> --></h1>
+                <h1 class="footer_title">Aprende + <!-- <img src="imagenes/logo.png" alt="" class="footer__img"> --></h1>
                 <span class="footer_subtitle">#Estamos_para_ayudarte <br> #Cuenta_con_nosotros</span>            </div>
             <ul class="footer_links">
                 <li>
                     <a href="#" class="footer_link">Inicio</a>
                 </li>
                 <li>
-                    <a href="#" class="footer_link">Materias</a>
+                    <a href="#semestres" class="footer_link">Semestres</a>
                 </li>
                 <li>
-                    <a href="#" class="footer_link">Contactanos</a>
+                    <a href="{{url('/developers')}}" class="footer_link">Desarrolladores</a>
                 </li>
             </ul>
             <div class="footer_socials">
-                <a href="" target="_blank" class="footer_social">
+                <a href="https://www.facebook.com/supportUAGRM" target="_blank" class="footer_social">
                     <i class="uil uil-facebook-f"></i>
                 </a>
-                <a href="" target="_blank" class="footer_social">
-                    <i class="uil uil-telegram-alt"></i>
+                <a href="https://www.youtube.com/channel/UCz9Q7IBBcKw78nqP7V54WBA" target="_blank" class="footer_social">
+                    <i class="uil uil-youtube"></i>
                 </a>
-                <a href="" target="_blank" class="footer_social">
+                <a href="https://chat.whatsapp.com/IIZZdKyTiW03F9IOdDpTKZ" target="_blank" class="footer_social">
                     <i class="uil uil-whatsapp"></i>
                 </a>
+                <a href="https://t.me/joinchat/Cohi-d79IsViMGIx" target="_blank" class="footer_social">
+                    <i class="uil uil-telegram-alt"></i>
+                </a>
+                
             </div>
         </div>
     </div>
