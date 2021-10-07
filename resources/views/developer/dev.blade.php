@@ -82,13 +82,8 @@
                          de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
-<<<<<<< HEAD
-                         <a href="http://wa.me//+59169086228" target="_blank" class="button button--flex">
-                             Contactame<i class="uil uil-message button_icon"></i>
-=======
                          <a href="http://wa.me//+59169086228" class="button button--flex">
                             Contáctame<i class="uil uil-message button_icon"></i>
->>>>>>> c129a9d8f644e6f9a56f500f63ab03d9a2ff81e3
                          </a>
                      </div>
                  </div>
@@ -122,13 +117,8 @@
                          de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
-<<<<<<< HEAD
-                         <a href="http://wa.me//+59171190290" target="_blank" class="button button--flex">
-                             Contactame<i class="uil uil-message button_icon"></i>
-=======
                          <a href="http://wa.me//+59171190290" class="button button--flex">
                             Contáctame<i class="uil uil-message button_icon"></i>
->>>>>>> c129a9d8f644e6f9a56f500f63ab03d9a2ff81e3
                          </a>
                      </div>
                  </div>
@@ -161,13 +151,8 @@
                          de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
-<<<<<<< HEAD
-                         <a href="http://wa.me//+59172182712" target="_blank" class="button button--flex">
-                             Contactame<i class="uil uil-message button_icon"></i>
-=======
                          <a href="http://wa.me//+59172182712" class="button button--flex">
                             Contáctame<i class="uil uil-message button_icon"></i>
->>>>>>> c129a9d8f644e6f9a56f500f63ab03d9a2ff81e3
                          </a>
                      </div>
                  </div>
