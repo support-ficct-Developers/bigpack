@@ -36,3 +36,5 @@ route::get('/postPacks/{idMateria}',[PackController::class,'indexPost'])->name('
 Route::resource('users',UserController::class);
 Route::get('/developers',[SemestreController::class,'developers']);
 Route::resource('auxiliares',AuxiliarController::class);
+route::get('/postAuxiliares',[AuxiliarController::class,'indexPost'])->name('postAuxiliares');
+
