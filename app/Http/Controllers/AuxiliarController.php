@@ -15,8 +15,8 @@ class AuxiliarController extends Controller
      */
     public function index()
     {
-        $auxiliares = Auxiliar::all();
-        return view('auxiliar.index', compact('auxiliares'));
+        $auxiliars = Auxiliar::all();
+        return view('auxiliar.index', compact('auxiliars'));
     }
 
     public function indexPost(){
@@ -51,7 +51,7 @@ class AuxiliarController extends Controller
             'descripcion'=>request('descripcion'),
             'imagen'=>request('imagen'),
         ]);
-        return redirect()->route('auxiliar.index');
+        return redirect()->route('auxiliares.index');
     }
 
     /**
@@ -95,7 +95,7 @@ class AuxiliarController extends Controller
         $auxiliar->imagen=$request->imagen;
         $auxiliar->save();
 
-        return redirect()->route('auxiliar.index');
+        return redirect()->route('auxiliares.index');
     }
 
     /**
@@ -107,6 +107,6 @@ class AuxiliarController extends Controller
     public function destroy(Auxiliar $auxiliar)
     {
         $auxiliar->delete();
-        return redirect()->route('auxiliar.index');
+        return redirect()->route('auxiliares.index');
     }
 }
