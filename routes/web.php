@@ -4,6 +4,7 @@ use App\Http\Controllers\MateriaController;
 use App\Http\Controllers\SemestreController;
 use App\Http\Controllers\PackController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AuxiliarController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +35,4 @@ route::get('/postMaterias/{semestres}',[MateriaController::class,'indexPost'])->
 route::get('/postPacks/{idMateria}',[PackController::class,'indexPost'])->name('postPacks');
 Route::resource('users',UserController::class);
 Route::get('/developers',[SemestreController::class,'developers']);
+Route::resource('auxiliares',AuxiliarController::class);

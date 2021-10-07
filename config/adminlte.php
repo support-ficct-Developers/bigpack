@@ -306,6 +306,11 @@ return [
         ],
         ['header' => 'ACCESOS RÁPIDOS '],
         [
+            'text'       => 'Auxiliares',
+            'icon' => 'fas fa-user-secret',
+            'url'        => '/auxiliares',
+        ],
+        [
             'text'    => 'Semestres',
             'icon'    => 'fas fa-building',
             'submenu' => [
