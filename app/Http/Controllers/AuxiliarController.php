@@ -30,7 +30,8 @@ class AuxiliarController extends Controller
     public function create()
     {
         $materias = DB::table('materias')->get();
-        return view('auxiliar.create',compact('materias'));
+        $tipos = ['oficial', 'voluntario'];
+        return view('auxiliar.create',compact('materias', 'tipos'));
     }
 
     public function store(Request $request)

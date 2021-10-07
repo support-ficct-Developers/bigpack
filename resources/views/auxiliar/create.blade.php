@@ -34,10 +34,12 @@
             
             @csrf
             <h5>Tipo:</h5>
-            <input type="text"  name="tipo"  class="focus border-primary  form-control">
-            @error('tipo')
-                <p>DEBE INGRESAR EL NOMBRE</p>
-            @enderror
+            <select name="tipo" class="form-control" id="select-tipo" >
+                <option value=0 >Seleccione el tipo</option>
+                     @foreach ($tipos as $tipo)
+                        <option value="{{ $tipo }}">{{ $tipo}}</option>
+                    @endforeach 
+            </select>
 
             @csrf
             <h5>Telefono:</h5>
