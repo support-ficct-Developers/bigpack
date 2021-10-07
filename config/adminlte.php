@@ -304,7 +304,7 @@ return [
                 [
                     'text' => 'Auxiliar',
                     'url'  => 'auxiliares',
-                    'can' => 'docentes.index'
+                    'can' => 'auxiliares.index'
                 ],
 
             ],
