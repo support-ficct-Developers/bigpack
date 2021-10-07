@@ -438,6 +438,7 @@ img{
     justify-self: center;
     align-self: center;
 }
+
 .about_description{
     text-align: center;
     margin-bottom: var(--mb-2-5);
@@ -886,7 +887,7 @@ img{
 }
 
 .semestres__img{
-    width: 50px;
+    width: 80px;
     align-self: center;
     margin-bottom: var(--mb-0-25);
 }
@@ -899,4 +900,9 @@ img{
 }
 .home_blob-img{
     width: 170px;
+}
+
+.img{
+    height: 50px;
+    width: 50px;
 }

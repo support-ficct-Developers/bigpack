@@ -18,7 +18,7 @@
                      <p class="about_description">Descripcion: {{$auxiliar->descripcion}}</p>
                     <div class="about_buttons">
                         <a href="http://wa.me//+591{{$auxiliar->telefono}}" target="_blank" class="button button--flex">
-                            Contactame<i class="uil uil-message button_icon"></i>
+                            Contáctame<i class="uil uil-message button_icon"></i>
                         </a>
                     </div>
             </div>

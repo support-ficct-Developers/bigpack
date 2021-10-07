@@ -12,11 +12,13 @@
 
     <body>
         <main>
+            
             <!--==================== ABOUT ====================-->
             <section class="about section" id="about">
+                
              <h2 class="section_title">
                  Desarrolladores
-                 <img src="imagenes/logoaprendemas.png" alt="" class="semestres__img">
+                 <image class="" width="8%" height="8%" src="{{asset('imagenes/logoo.png')}}"/>
                 </h2>
              <span class="section_subtitle">Acerca de nosotros</span> 
              <div class="about_container container grid">
@@ -157,6 +159,9 @@
                      </div>
                  </div>
              </div>
+
+             
+                         
          </section>
          </main>
 
@@ -173,10 +178,6 @@
 
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-<!--==================== CSS ====================-->
-    <link rel="stylesheet" href="./css/styles.css">
-
-    <link rel="shortcut icon" href="./img/logo.png" />
 @stop
 
 @section('js')
