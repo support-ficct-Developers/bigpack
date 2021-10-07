@@ -16,7 +16,6 @@
 
         <main class="main">
             @include('auxiliar.dataAuxiliar')
-            @include('auxiliar.dataAuxiliar')
         </main>
         
         <!--==================== FOOTER ====================-->

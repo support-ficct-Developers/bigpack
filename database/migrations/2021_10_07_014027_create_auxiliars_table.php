@@ -17,6 +17,7 @@ class CreateAuxiliarsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('id_materia')->nullable();
             $table->string('Nombre');
+            $table->string('tipo')->nullable();
             $table->string('Telefono');
             $table->string('descripcion')->nullable();
             $table->string('imagen')->nullable();
