@@ -8,11 +8,13 @@ use Illuminate\Support\Facades\DB;
 
 class AuxiliarController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    public function __construct()
+    {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
+        $this->middleware('can:auxiliares.index')->only('index');
+        $this->middleware('can:auxiliares.create')->only('create', 'store');
+        $this->middleware('can:auxiliares.edit')->only('edit', 'update');
+        $this->middleware('can:auxiliares.destroy')->only('destroy');
+    }
     public function index()
     {
         $auxiliares = Auxiliar::all();
@@ -23,23 +25,13 @@ class AuxiliarController extends Controller
         
         return view('auxiliar.postAuxiliar');
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function create()
     {
         $materias = DB::table('materias')->get();
         return view('auxiliar.create',compact('materias'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         date_default_timezone_set("America/La_Paz");
@@ -54,36 +46,20 @@ class AuxiliarController extends Controller
         return redirect()->route('auxiliar.index');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Auxiliar  $auxiliar
-     * @return \Illuminate\Http\Response
-     */
+    
     public function show(Auxiliar $auxiliar)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Auxiliar  $auxiliar
-     * @return \Illuminate\Http\Response
-     */
+   
     public function edit(Auxiliar $auxiliar)
     {
         $materias = DB::table('materias')->get();
         return view('auxiliar.edit',compact('auxiliar','materias'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Auxiliar  $auxiliar
-     * @return \Illuminate\Http\Response
-     */
+    
     public function update(Request $request, Auxiliar $auxiliar)
     {
         date_default_timezone_set("America/La_Paz");
@@ -98,12 +74,7 @@ class AuxiliarController extends Controller
         return redirect()->route('auxiliar.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Auxiliar  $auxiliar
-     * @return \Illuminate\Http\Response
-     */
+    
     public function destroy(Auxiliar $auxiliar)
     {
         $auxiliar->delete();
