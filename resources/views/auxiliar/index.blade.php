@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Packs')
+@section('title', 'AUXILIARES')
 
 @section('content_header')
-  <h1>LISTA DE PACKS</h1>
+  <h1>LISTA DE AUXILIARES</h1>
 @stop
 
 @section('content')
@@ -37,23 +37,20 @@
             <tr>
               <td>{{$auxiliar->id}}</td>
               <td>{{DB::table('materias')->where('id',$auxiliar->id_materia)->value('nombre')}}</td>
-              <td>{{DB::table('docentes')->where('id',$auxiliar->id_docente)->value('nombre')}}</td>
-              <td>{{$auxiliar->link}}</td>
-              <td>{{$auxiliar->descripcion}}</td>
+              <td>{{$auxiliar->nombre}}</td>
+              <td>{{$auxiliar->telefono}}</td>
+              <td>{{$auxiliar->imagen}}</td>
               <td >
-                <form  action="{{route('packs.destroy',$pack)}}" method="post">
+                <form  action="{{route('auxiliares.destroy',$auxiliar)}}" method="post">
                   @csrf
                   @method('delete')
                     {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-                    @can('packs.show') 
-                    <a  class="btn btn-primary btn-sm" href="{{route('packs.show',$auxiliar)}}">Ver</a>  
+
+                    @can('auxiliares.edit')
+                      <a class="btn btn-info btn-sm" href="{{route('auxiliares.edit',$auxiliar)}}">Editar</a>                 
                     @endcan
 
-                    @can('packs.edit')
-                      <a class="btn btn-info btn-sm" href="{{route('packs.edit',$auxiliar)}}">Editar</a>                 
-                    @endcan
-
-                    @can('packs.destroy')
+                    @can('auxiliares.destroy')
                     <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
                     value="Borrar">Eliminar</button>
                     @endcan  
