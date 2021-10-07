@@ -22,8 +22,9 @@ class AuxiliarController extends Controller
     }
 
     public function indexPost(){
-        
-        return view('auxiliar.postAuxiliar');
+        $auxiliars = Auxiliar::all();
+        return view('auxiliar.postAuxiliar', compact('auxiliars'));
+  
     }
     
     public function create()
