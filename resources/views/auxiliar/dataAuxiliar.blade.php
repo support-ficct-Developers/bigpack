@@ -12,12 +12,12 @@
         <div class="about_container container grid">
             <img src="{{$auxiliar->imagen}}" alt="" class="about_img">
             <div class="about_data">
+                <h1 class="desa_title">{{DB::table('materias')->where('id',$auxiliar->id_materia)->value('nombre')}}</h1>
                 <h1 class="desa_title">{{$auxiliar->nombre}}</h1>
                      <span class="desa_subtitle">Auxiliar - {{$auxiliar->tipo}} </span>
-                     <p class="about_description">{{DB::table('materias')->where('id',$auxiliar->id_materia)->value('nombre')}} - {{$auxiliar->descripcion}}</p>
-                     <p class="about_description">{{$auxiliar->descripcion}}</p>
+                     <p class="about_description">Descripcion: {{$auxiliar->descripcion}}</p>
                     <div class="about_buttons">
-                        <a href="http://wa.me//+591{{$auxiliar->telefono}}" class="button button--flex">
+                        <a href="http://wa.me//+591{{$auxiliar->telefono}}" target="_blank" class="button button--flex">
                             Contactame<i class="uil uil-message button_icon"></i>
                         </a>
                     </div>

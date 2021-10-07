@@ -1,32 +1,22 @@
 @extends('adminlte::page')
 
-@section('title', 'Support - Aprende +')
+@section('title', 'Support - Aprende Mas')
 
 @section('content_header')
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Support</title>
 @stop
 
 @section('content')
         
 
     <body>
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav_logo">Support</a>
-                <div class="nav_btns">
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
-                </div>
-            </nav>
-        </header>
         <main>
             <!--==================== ABOUT ====================-->
             <section class="about section" id="about">
              <h2 class="section_title">
                  Desarrolladores
-                 <img src="imagenes/logo.png" alt="" class="semestres__img">
+                 <img src="imagenes/logoaprendemas.png" alt="" class="semestres__img">
                 </h2>
              <span class="section_subtitle">Acerca de nosotros</span> 
              <div class="about_container container grid">
@@ -57,7 +47,7 @@
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="http://wa.me//+59173665042" class="button button--flex">
+                         <a href="http://wa.me//+59173665042" target="_blank" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
@@ -92,7 +82,7 @@
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="http://wa.me//+59169086228" class="button button--flex">
+                         <a href="http://wa.me//+59169086228" target="_blank" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
@@ -127,7 +117,7 @@
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="http://wa.me//+59171190290" class="button button--flex">
+                         <a href="http://wa.me//+59171190290" target="_blank" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
@@ -161,7 +151,7 @@
                          de la Universidad Autonoma Gabriel Rene Moreno</p>
                      
                      <div class="about_buttons">
-                         <a href="http://wa.me//+59172182712" class="button button--flex">
+                         <a href="http://wa.me//+59172182712" target="_blank" class="button button--flex">
                              Contactame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>

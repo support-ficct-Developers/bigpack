@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'AUXILIARES')
+@section('title', 'Auxiliares')
 
 @section('content_header')
   <h1>LISTA DE AUXILIARES</h1>
@@ -11,7 +11,7 @@
     <div class="card-header">
         {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
         @can('packs.create')
-          <a class="btn btn-primary btb-sm" href="{{route('auxiliares.create')}}">Registrar Packs</a>    
+          <a class="btn btn-primary btb-sm" href="{{route('auxiliares.create')}}">Registrar Auxiliar</a>    
         @endcan
     </div>
   </div>

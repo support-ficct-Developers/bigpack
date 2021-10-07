@@ -49,37 +49,37 @@ class AuxiliarController extends Controller
     }
 
     
-    public function show(Auxiliar $auxiliar)
+    public function show(Auxiliar $auxiliare)
     {
         //
     }
 
    
-    public function edit(Auxiliar $auxiliar)
+    public function edit(Auxiliar $auxiliare)
     {
         $materias = DB::table('materias')->get();
-        return view('auxiliar.edit',compact('auxiliar','materias'));
+        return view('auxiliar.edit',compact('auxiliare','materias'));
     }
 
     
-    public function update(Request $request, Auxiliar $auxiliar)
+    public function update(Request $request, Auxiliar $auxiliare)
     {
         date_default_timezone_set("America/La_Paz");
-        $auxiliar->id_materia=$request->id_materia;
-        $auxiliar->nombre=$request->nombre;
-        $auxiliar->tipo=$request->tipo;
-        $auxiliar->telefono=$request->telefono;
-        $auxiliar->descripcion=$request->descripcion;
-        $auxiliar->imagen=$request->imagen;
-        $auxiliar->save();
+        $auxiliare->id_materia=$request->id_materia;
+        $auxiliare->nombre=$request->nombre;
+        $auxiliare->tipo=$request->tipo;
+        $auxiliare->telefono=$request->telefono;
+        $auxiliare->descripcion=$request->descripcion;
+        $auxiliare->imagen=$request->imagen;
+        $auxiliare->save();
 
         return redirect()->route('auxiliares.index');
     }
 
     
-    public function destroy(Auxiliar $auxiliar)
+    public function destroy(Auxiliar $auxiliare)
     {
-        $auxiliar->delete();
+        $auxiliare->delete();
         return redirect()->route('auxiliares.index');
     }
 }
