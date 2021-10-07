@@ -54,11 +54,11 @@
                      <h1 class="desa_title">Fernando</h1>
                      <span class="desa_subtitle">Frontend-Developer</span>
                      <p class="about_description">Estudiante de la Carrera de Ingeniera en Redes y Telecomunicaciones 
-                         de la Universidad Autonoma Gabriel Rene Moreno</p>
+                         de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
                          <a href="http://wa.me//+59173665042" class="button button--flex">
-                             Contactame<i class="uil uil-message button_icon"></i>
+                             Contáctame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
                  </div>
@@ -89,11 +89,11 @@
                      <h1 class="desa_title">Jose Daniel</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
                      <p class="about_description">Estudiante de la Carrera de Ingeniera en Sistemas 
-                         de la Universidad Autonoma Gabriel Rene Moreno</p>
+                         de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
                          <a href="http://wa.me//+59169086228" class="button button--flex">
-                             Contactame<i class="uil uil-message button_icon"></i>
+                            Contáctame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
                  </div>
@@ -124,11 +124,11 @@
                      <h1 class="desa_title">Harold</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
                      <p class="about_description">Estudiante de la Carrera de Ingeniera en Sistemas
-                         de la Universidad Autonoma Gabriel Rene Moreno</p>
+                         de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
                          <a href="http://wa.me//+59171190290" class="button button--flex">
-                             Contactame<i class="uil uil-message button_icon"></i>
+                            Contáctame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
                  </div>
@@ -158,11 +158,11 @@
                      <h1 class="desa_title">Darwin</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
                      <p class="about_description">Estudiante de la Carrera de Ingeniera Informatica 
-                         de la Universidad Autonoma Gabriel Rene Moreno</p>
+                         de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
                          <a href="http://wa.me//+59172182712" class="button button--flex">
-                             Contactame<i class="uil uil-message button_icon"></i>
+                            Contáctame<i class="uil uil-message button_icon"></i>
                          </a>
                      </div>
                  </div>
