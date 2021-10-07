@@ -301,14 +301,19 @@ return [
                     'url'  => 'docentes',
                     'can' => 'docentes.index'
                 ],
+                [
+                    'text' => 'Auxiliar',
+                    'url'  => 'auxiliares',
+                    'can' => 'docentes.index'
+                ],
 
             ],
         ],
-        ['header' => 'ACCESOS RÁPIDOS '],
+        ['header' => 'ACCESOS RÁPIDOS'],
         [
             'text'       => 'Auxiliares',
             'icon' => 'fas fa-user-secret',
-            'url'        => '/auxiliares',
+            'url'        => '/postAuxiliares',
         ],
         [
             'text'    => 'Semestres',

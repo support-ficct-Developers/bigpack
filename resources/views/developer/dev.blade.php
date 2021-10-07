@@ -24,7 +24,10 @@
         <main>
             <!--==================== ABOUT ====================-->
             <section class="about section" id="about">
-             <h2 class="section_title">Desarrolladores</h2>
+             <h2 class="section_title">
+                 Desarrolladores
+                 <img src="imagenes/logo.png" alt="" class="semestres__img">
+                </h2>
              <span class="section_subtitle">Acerca de nosotros</span> 
              <div class="about_container container grid">
                  <div class="home_img">
