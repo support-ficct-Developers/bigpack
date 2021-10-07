@@ -16,13 +16,13 @@ class CreateAuxiliarsTable extends Migration
         Schema::create('auxiliars', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('id_materia')->nullable();
-            $table->string('Nombre');
+            $table->string('nombre');
             $table->string('tipo')->nullable();
-            $table->string('Telefono');
+            $table->string('telefono');
             $table->string('descripcion')->nullable();
             $table->string('imagen')->nullable();
             $table->foreign('id_materia')->references('id')->on('materias')->onDelete('set null')->onUpdate('cascade');
-            
+
             $table->timestamps();
         });
     }

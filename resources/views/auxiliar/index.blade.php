@@ -25,7 +25,6 @@
             <th scope="col">Materia</th>
             <th scope="col">Nombre</th>
             <th scope="col">telefono</th>
-            <th scope="col">Descripcion</th>
             <th scope="col">Imagen</th>
             <th scope="col" width="15%">Acciones</th>
             {{-- <th colspan=""></th> --}}
@@ -37,8 +36,8 @@
           @foreach ($auxiliars as $auxiliar)
             <tr>
               <td>{{$auxiliar->id}}</td>
-              <td>{{DB::table('materias')->where('id',$pack->id_materia)->value('nombre')}}</td>
-              <td>{{DB::table('docentes')->where('id',$pack->id_docente)->value('nombre')}}</td>
+              <td>{{DB::table('materias')->where('id',$auxiliar->id_materia)->value('nombre')}}</td>
+              <td>{{DB::table('docentes')->where('id',$auxiliar->id_docente)->value('nombre')}}</td>
               <td>{{$auxiliar->link}}</td>
               <td>{{$auxiliar->descripcion}}</td>
               <td >
