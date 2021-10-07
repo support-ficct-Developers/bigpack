@@ -211,6 +211,17 @@ class MateriaSeeder extends Seeder
             'sigla'=> 'RDS310'
         ]);
 
+        Materia::create([
+            'id_semestre'=> '5',
+            'nombre'=>'SISTEMAS LOGICOS Y DIGITALES I',
+            'sigla'=> 'ELT352'
+        ]);
+
+        Materia::create([
+            'id_semestre'=> '5',
+            'nombre'=>'SENALES Y SISTEMAS',
+            'sigla'=> 'ELT354'
+        ]);
          //semestre 6-----------------------------------------------------------
          Materia::create([
             'id_semestre'=> '6',
@@ -254,6 +265,11 @@ class MateriaSeeder extends Seeder
             'sigla'=> 'RDS320'
         ]);
 
+        Materia::create([
+            'id_semestre'=> '6',
+            'nombre'=>'SISTEMAS LOGICOS Y DIGITALES II',
+            'sigla'=> 'ELT362'
+        ]);
         //semestre 7-----------------------------------------------------------
             
 
@@ -297,6 +313,12 @@ class MateriaSeeder extends Seeder
                 'id_semestre'=> '7',
                 'nombre'=>'APLICACIONES CON MICROPROCESAD.',
                 'sigla'=> 'RDS410'
+            ]);
+
+            Materia::create([
+                'id_semestre'=> '7',
+                'nombre'=>'SISTEMAS DE COMUNICACION I',
+                'sigla'=> 'ELT374'
             ]);
         //semestre 8-----------------------------------------------------------
             Materia::create([
@@ -418,17 +440,7 @@ class MateriaSeeder extends Seeder
             'sigla'=> 'ELC201'
         ]);
 
-        Materia::create([
-            'id_semestre'=> '10',
-            'nombre'=>'SISTEMAS LOGICOS Y DIGITALES I',
-            'sigla'=> 'ELT352'
-        ]);
-
-        Materia::create([
-            'id_semestre'=> '10',
-            'nombre'=>'SENALES Y SISTEMAS',
-            'sigla'=> 'ELT354'
-        ]);
+        
 
         //6tosemestre
         Materia::create([
@@ -449,11 +461,7 @@ class MateriaSeeder extends Seeder
             'sigla'=> 'ELC204'
         ]);
 
-        Materia::create([
-            'id_semestre'=> '10',
-            'nombre'=>'SISTEMAS LOGICOS Y DIGITALES II',
-            'sigla'=> 'ELT362'
-        ]);
+        
 
         //7mo smeestre
 
@@ -475,11 +483,7 @@ class MateriaSeeder extends Seeder
             'sigla'=> 'ELC206'
         ]);
 
-        Materia::create([
-            'id_semestre'=> '10',
-            'nombre'=>'SISTEMAS DE COMUNICACION I',
-            'sigla'=> 'ELT374'
-        ]);
+        
 
         //8vo semestre
 
