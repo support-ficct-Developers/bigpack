@@ -49,12 +49,6 @@ class MateriaSeeder extends Seeder
             'sigla'=> 'FIS101'
         ]);
 
-        
-        Materia::create([
-            'id_semestre'=> '2',
-            'nombre'=>'',
-            'sigla'=> ''
-        ]);
 
         Materia::create([
             'id_semestre'=> '2',
