@@ -309,6 +309,7 @@ return [
             'text'       => 'Auxiliares',
             'icon' => 'fas fa-user-secret',
             'url'        => '/auxiliares',
+            'can' => 'auxiliares.index'
         ],
         [
             'text'    => 'Semestres',
