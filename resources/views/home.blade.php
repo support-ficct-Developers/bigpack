@@ -1,16 +1,17 @@
-@extends('adminlte::page')
+﻿@extends('adminlte::page')
 
 @section('title', 'Support')
 
 @section('content_header')
-
+    <meta name=description content="Packs Support academico de todas las materias 1er semestre a 9no semestre">
+    <meta name=author content="Aprende+">
 @stop
 
 @section('content')
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support</title>
+    <title>Support</title>	
 </head>
 
 <body>
