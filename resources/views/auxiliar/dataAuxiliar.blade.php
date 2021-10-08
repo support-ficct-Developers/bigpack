@@ -12,8 +12,8 @@
         <div class="about_container container grid">
             <img src="{{$auxiliar->imagen}}" alt="" class="about_img">
             <div class="about_data">
-                <h1 class="desa_title">{{DB::table('materias')->where('id',$auxiliar->id_materia)->value('nombre')}}</h1>
                 <h1 class="desa_title">{{$auxiliar->nombre}}</h1>
+                <h1 class="desa_title">{{$auxiliar->materias}}</h1>
                      <span class="desa_subtitle">Auxiliar - {{$auxiliar->tipo}} </span>
                      <p class="about_description">Descripcion: {{$auxiliar->descripcion}}</p>
                     <div class="about_buttons">

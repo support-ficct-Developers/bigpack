@@ -11,18 +11,11 @@
     <div class="card-body">
         <form method="post" action="{{route('auxiliares.store')}}" novalidate >
 
-            <h5>Materia:</h5>
-            <select name = "id_materia" id="id_materia" class="form-control" onchange="habilitar()" >
-                <option value="nulo">Seleccione la materia </option>
-                    @foreach ($materias as $materia)
-                        <option value="{{$materia->id}}">
-                            {{$materia->nombre}}
-                        </option>
-                    @endforeach
-            </select>
-           
-            @error('id_materia')
-                <p>DEBE INGRESAR BIEN LA MATERIA</p>
+            @csrf
+            <h5>Materias:</h5>
+            <input type="text"  name="materias"  class="focus border-primary  form-control">
+            @error('materias')
+                <p>DEBE INGRESAR BIEN LAS MATERIAS</p>
             @enderror
 
             @csrf

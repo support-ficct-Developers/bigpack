@@ -22,7 +22,7 @@
         <thead>
           <tr>
             <th scope="col">ID</th>
-            <th scope="col">Materia</th>
+            <th scope="col">Materias</th>
             <th scope="col">Nombre</th>
             <th scope="col">telefono</th>
             <th scope="col">Imagen</th>
@@ -36,7 +36,7 @@
           @foreach ($auxiliars as $auxiliar)
             <tr>
               <td>{{$auxiliar->id}}</td>
-              <td>{{DB::table('materias')->where('id',$auxiliar->id_materia)->value('nombre')}}</td>
+              <td>{{$auxiliar->materias}}</td>
               <td>{{$auxiliar->nombre}}</td>
               <td>{{$auxiliar->telefono}}</td>
               <td>{{$auxiliar->imagen}}</td>

@@ -18,7 +18,7 @@
             @include('packPost.dataPack')
         </main>
         
-        <!--==================== FOOTER ====================-->
+   
         <footer class="footer">
             <div class="footer_bg">
                 <div class="footer__content">
@@ -58,8 +58,7 @@
                 <p class="footer_copy">&#169; SUPPORT. Todos los derechos Reservados</p>
             </div>
         </footer>
-    <!--==================== SCROLL TOP ====================-->
-        <!--==================== SCROLL TOP ====================-->
+    
             <a href="#" class="scrollup" id="scroll-up">
                 <i class="uil uil-arrow-up scrollup_icon"></i>
             </a>

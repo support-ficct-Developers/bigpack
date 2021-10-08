@@ -13,7 +13,6 @@
     <body>
         <main>
             
-            <!--==================== ABOUT ====================-->
             <section class="about section" id="about">
                 
              <h2 class="section_title">
@@ -166,7 +165,7 @@
          </main>
 
 
-        <!--==================== SCROLL TOP ====================-->
+        
             <a href="#" class="scrollup" id="scroll-up">
                 <i class="uil uil-arrow-up scrollup_icon"></i>
             </a>

@@ -29,16 +29,15 @@ class AuxiliarController extends Controller
     
     public function create()
     {
-        $materias = DB::table('materias')->get();
         $tipos = ['oficial', 'voluntario'];
-        return view('auxiliar.create',compact('materias', 'tipos'));
+        return view('auxiliar.create',compact('tipos'));
     }
 
     public function store(Request $request)
     {
         date_default_timezone_set("America/La_Paz");
         $Aux=Auxiliar::create([
-            'id_materia'=>request('id_materia'),
+            'materias'=>request('materias'),
             'nombre'=>request('nombre'),
             'tipo'=>request('tipo'),
             'telefono'=>request('telefono'),
@@ -65,7 +64,7 @@ class AuxiliarController extends Controller
     public function update(Request $request, Auxiliar $auxiliare)
     {
         date_default_timezone_set("America/La_Paz");
-        $auxiliare->id_materia=$request->id_materia;
+        $auxiliare->materias=$request->materias;
         $auxiliare->nombre=$request->nombre;
         $auxiliare->tipo=$request->tipo;
         $auxiliare->telefono=$request->telefono;

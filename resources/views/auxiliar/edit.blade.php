@@ -14,17 +14,11 @@
             @csrf
             @method('PATCH')
 
-            <h5>Materia:</h5>
-            <select name = "id_materia" id="id_materia" class="form-control" onchange="habilitar()" >
-                <option value="{{$auxiliare->id_materia}}">{{DB::table('materias')->where('id',$auxiliare->id_materia)->value('nombre')}}</option>
-                    @foreach ($materias as $materia)
-                        <option value="{{$materia->id}}">
-                            {{$materia->nombre}}
-                        </option>
-                    @endforeach
-            </select>
-            @error('id_materia')
-                <p>DEBE INGRESAR BIEN LA MATERIA</p>
+            @csrf
+            <h5>Nombre:</h5>
+            <input type="text"  name="materias" value="{{$auxiliare->materias}}" class="focus border-primary  form-control">
+            @error('materias')
+                <p>DEBE INGRESAR BIEN LAS MATERIAS</p>
             @enderror
                 
             @csrf
