@@ -179,7 +179,7 @@
                 <h1 class="footer_title">Support </h1>
                 <h1 class="footer_title">Aprende+</h1>
                 <img src="imagenes/logo.png" alt="" class="footer__img">
-                <image class="" width="25%" height="25%" src="{{asset('imagenes/logowhite.png')}}"/>
+                <image class="footer__img" width="25%" height="25%" src="{{asset('imagenes/logowhite.png')}}"/>
                 <span class="footer_subtitle">#Estamos_para_ayudarte <br> #Cuenta_con_nosotros</span>            </div>
             <ul class="footer_links">
                 <li>
