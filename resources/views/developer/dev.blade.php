@@ -17,7 +17,7 @@
                 
              <h2 class="section_title">
                  Desarrolladores
-                 <image class="" width="8%" height="8%" src="{{asset('imagenes/logoo.png')}}"/>
+                 {{--  <image class="" width="8%" height="8%" src="{{asset('imagenes/logoo.png')}}"/>  --}}
                 </h2>
              <span class="section_subtitle">Acerca de nosotros</span> 
              <div class="about_container container grid">
@@ -44,7 +44,7 @@
                  <div class="about_data">
                      <h1 class="desa_title">Fernando</h1>
                      <span class="desa_subtitle">Frontend-Developer</span>
-                     <p class="about_description">Estudiante de la Carrera de Ingeniera en Redes y Telecomunicaciones 
+                     <p class="about_description">Estudiante de la Carrera de Ingenieria en Redes y Telecomunicaciones 
                          de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
@@ -79,7 +79,7 @@
                  <div class="about_data">
                      <h1 class="desa_title">Jose Daniel</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
-                     <p class="about_description">Estudiante de la Carrera de Ingeniera en Sistemas 
+                     <p class="about_description">Estudiante de la Carrera de Ingenieria en Sistemas 
                          de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
@@ -114,7 +114,7 @@
                  <div class="about_data">
                      <h1 class="desa_title">Harold</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
-                     <p class="about_description">Estudiante de la Carrera de Ingeniera en Sistemas
+                     <p class="about_description">Estudiante de la Carrera de Ingenieria en Sistemas
                          de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">
@@ -148,7 +148,7 @@
                  <div class="about_data">
                      <h1 class="desa_title">Darwin</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
-                     <p class="about_description">Estudiante de la Carrera de Ingeniera Informatica 
+                     <p class="about_description">Estudiante de la Carrera de Ingenieria Informatica 
                          de la Universidad Autónoma Gabriel René Moreno</p>
                      
                      <div class="about_buttons">

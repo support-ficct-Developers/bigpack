@@ -12,7 +12,7 @@
         <form method="post" action="{{route('docentes.store')}}" novalidate >
 
             @csrf
-            <h5>Nombre Docente</h5>
+            <h5>Nombre del Docente:</h5>
             <input type="text"  name = "nombre"  class="focus border-primary  form-control">
             @error('nombre')
                 <p>DEBE INGRESAR BIEN SU NOMBRE</p>

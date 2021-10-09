@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Materias - Axuliares')
+@section('title', 'Auxiliares FICCT')
 
 @section('content_header')
     <h2 class="section_title">Auxiliares</h2>

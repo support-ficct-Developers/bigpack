@@ -21,6 +21,7 @@
       <table class="table table-striped" id="docentes" >
         <thead>
           <tr>
+            <th scope="col">ID</th>
             <th scope="col">Nombre Completo</th>
             <th scope="col" width="20%">Acciones</th>
             {{-- <th colspan=""></th> --}}
@@ -31,6 +32,7 @@
 
           @foreach ($docentes as $docente)
             <tr>
+              <td>{{$docente->id}}</td>
               <td>{{$docente->nombre}}</td>
               <td >
                 <form  action="{{route('docentes.destroy',$docente)}}" method="post">
