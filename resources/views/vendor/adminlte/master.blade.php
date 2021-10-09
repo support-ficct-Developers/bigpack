@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name=description content="Packs Support academico de todas las materias 1er semestre a 9no semestre">
+    <meta name=description content="Pack academico de todas las materias 1er semestre a 9no semestre - FICCT">
     <meta name=author content="Aprende+">
     <meta property="og:image" content="{{ asset('imagenes/og_logo.png') }}">
     <link rel="icon" 
