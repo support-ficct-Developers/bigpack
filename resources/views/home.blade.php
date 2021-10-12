@@ -22,7 +22,7 @@
             <div class="home_container container grid">
                 <div class="home_content grid">
                     <div class="home_social">
-                        <i class="uil uil-moon home_social-icon" id="theme-button"></i>
+                        {{--  <i class="uil uil-moon home_social-icon" id="theme-button"></i>  --}}
                         <a href="https://www.facebook.com/supportUAGRM" target="_blank" class="home_social-icon">
                             <i class="uil uil-facebook-f"></i>
                         </a>

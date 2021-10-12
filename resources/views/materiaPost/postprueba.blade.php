@@ -21,21 +21,23 @@
         @include('materiaPost.dataprueba')
     </main>
 
-
+    <!--==================== FOOTER ====================-->
     <footer class="footer">
         <div class="footer_bg">
             <div class="footer__content">
             <div class="footer_container container grid">
                 <div>
-                    <h1 class="footer_title">Support <!-- <img src="imagenes/logo.png" alt="" class="footer__img"> --></h1>
-                    <h1 class="footer_title">Aprende + <!-- <img src="imagenes/logo.png" alt="" class="footer__img"> --></h1>
+                    <h1 class="footer_title">Support </h1>
+                    <h1 class="footer_title">Aprende+</h1>
+                   {{--   <img src="imagenes/logo.png" alt="" class="footer__img">
+                    <image class="footer__img" width="25%" height="25%" src="{{asset('imagenes/logowhite.png')}}"/>  --}}
                     <span class="footer_subtitle">#Estamos_para_ayudarte <br> #Cuenta_con_nosotros</span>            </div>
                 <ul class="footer_links">
                     <li>
                         <a href="#" class="footer_link">Inicio</a>
                     </li>
                     <li>
-                        <a href="{{url('/postSemestres')}}#semestres" class="footer_link">Semestres</a>
+                        <a href="#semestres" class="footer_link">Semestres</a>
                     </li>
                     <li>
                         <a href="{{url('/developers')}}" class="footer_link">Desarrolladores</a>
