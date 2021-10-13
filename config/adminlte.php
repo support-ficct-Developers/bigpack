@@ -389,7 +389,7 @@ return [
         [
             'text'       => 'Youtube',
             'icon' => 'fab fa-youtube',
-            'url'        => 'https://www.facebook.com/AprendeMasFICCT',
+            'url'        => 'https://www.youtube.com/c/AprendeM%C3%A1sFICCT',
         ],
         
     ],
