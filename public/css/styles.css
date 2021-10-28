@@ -747,6 +747,18 @@ img{
         text-align: initial;
     }
 }
+@media screen and (min-width: 350px){
+    .semestres_content{
+        margin-right:var(--mb-1);
+    }
+    .home_img{
+        width: 280px;
+    }
+    .home_content{
+        margin-right:var(--mb-0-5);
+    }
+}
+}
 @media screen and (min-width:768px){
     .container{
         margin-left: auto;
@@ -877,3 +889,15 @@ img{
     height: 50px;
     width: 50px;
 }
+
+/* la editadiñaaaa  */
+.content-wrapper{
+    background-color: var(--body-color);
+}
+.main-header{
+     background-color: var(--body-color);
+}
+.fa-bars{
+    color: var(--first-color);
+}
+
