@@ -18,7 +18,7 @@
 
 
     <main class="main">
-        @include('materiaPost.dataprueba')
+            @include('materiaPost.dataprueba')
     </main>
 
     <!--==================== FOOTER ====================-->
@@ -77,5 +77,5 @@
 @section('js')
 <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('/js/scroll.js')}}"></script>
 @stop
