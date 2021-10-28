@@ -96,7 +96,7 @@ class UserController extends Controller
         $nombreRol = DB::table('roles')->where('id', '=', $user->idRol)->value('name');
         $user->removeRole($nombreRol);
         $user->delete();
-
+        
         return redirect()->route('users.index');
     }
 }
