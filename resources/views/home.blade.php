@@ -50,7 +50,7 @@
             <!--==================== Primer Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Primer <br> Semestre</h3>
                 </div>
 
@@ -62,7 +62,7 @@
             <!--==================== Segundo Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Segundo <br> Semestre</h3>
                 </div>
 
@@ -74,7 +74,7 @@
             <!--==================== Tercer Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Tercer <br> Semestre</h3>
                 </div>
 
@@ -86,7 +86,7 @@
             <!--==================== Cuarto Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Cuarto <br> Semestre</h3>
                 </div>
 
@@ -98,7 +98,7 @@
             <!--==================== Quinto Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Quinto <br> Semestre</h3>
                 </div>
 
@@ -110,7 +110,7 @@
             <!--==================== Sexto Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Sexto <br> Semestre</h3>
                 </div>
 
@@ -122,7 +122,7 @@
             <!--==================== Septimo Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Séptimo  <br> Semestre</h3>
                 </div>
 
@@ -134,7 +134,7 @@
             <!--==================== Octavo Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Octavo <br> Semestre</h3>
                 </div>
 
@@ -146,7 +146,7 @@
             <!--==================== Noveno Semestre ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Noveno <br> Semestre</h3>
                 </div>
 
@@ -158,7 +158,7 @@
             <!--==================== Electivas ====================-->
             <div class="semestres_content">
                 <div>
-                    <img src="imagenes/logo.png" alt="" class="semestres__img">
+                    <img src="{{asset('imagenes/logo.png')}}" alt="" class="semestres__img">
                     <h3 class="semestres_title">Electivas</h3>
                 </div>
 
