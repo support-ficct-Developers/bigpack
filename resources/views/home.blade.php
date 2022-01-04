@@ -222,7 +222,7 @@
 
 @section('css')
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
     
 @stop
 
@@ -231,5 +231,5 @@
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 <!--========== SCROLL REVEAL ==========-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 @stop
