@@ -89,7 +89,7 @@
                      </div>
                  </div>
              </div>
-         
+          
              <div class="about_container container grid">
                  <div class="home_img">
                      <svg class="home_blob"viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
