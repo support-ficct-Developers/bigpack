@@ -77,7 +77,7 @@
                  </div>
                 <!--  <img src="./img/PicsArt_09-24-12.28.24.jpg" alt="" class="about_img"> -->
                  <div class="about_data">
-                     <h1 class="desa_title">Jose Daniel</h1>
+                     <h1 class="desa_title">Jose Daniel - Owner</h1>
                      <span class="desa_subtitle">Backend-Developer </span>
                      <p class="about_description">Estudiante de la Carrera de Ingenieria en Sistemas 
                          de la Universidad Autónoma Gabriel René Moreno</p>
