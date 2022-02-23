@@ -218,6 +218,9 @@
         </a>
 
 </body>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8737715429027255"
+     crossorigin="anonymous"></script>
+     
 @stop
 
 @section('css')
