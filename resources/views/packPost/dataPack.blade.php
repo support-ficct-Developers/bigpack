@@ -12,7 +12,8 @@
             <div class="pack_container container grid">
                 <div class="pack_content">
                     <div class="semestres_modal-content">
-                        <h4 class="semestres_modal-title">Docente: {{DB::table('docentes')->where('id',$pack->id_docente)->value('nombre')}}</h4>
+                        <h4 class="semestres_modal-title">Docente: {{$pack->docente->nombre}}</h4>
+                        
                         <h3 class="semestres_title">Descripción: {{$pack->descripcion}}</h3>
                         {{--  <ul class="semestres_modal-semestres">
                             <li class="semestres_modal-service">

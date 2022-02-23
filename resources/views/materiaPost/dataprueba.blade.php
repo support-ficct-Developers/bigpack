@@ -14,8 +14,8 @@
                         <h3>{{$materia->nombre}}</h3>
                     </div>
                     <div class="card-body">
-                        <p>Sigla: {{$materia->sigla}}</p>
-                        <p>Semestre: {{DB::table('semestres')->where('id',$materia->id_semestre)->value('nombre')}}</p>
+                        <p>Sigla: {{$materia->sigla}}</p> 
+                        <p>Semestre: {{$materia->semestre->nombre}}</p>
                         <span class="button button--flex button--small button--link semestres_button">
                             <a href="{{route('postPacks',$materia->id)}}" class="button--link">Ver packs</a>             
                             <i class="uil uil-arrow-from-right button_icon"></i>  

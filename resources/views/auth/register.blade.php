@@ -63,11 +63,9 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                @can('registrar')
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Register') }}
                                     </button>
-                                @endcan
                                 
                             </div>
                         </div>

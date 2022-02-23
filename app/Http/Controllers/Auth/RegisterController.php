@@ -69,6 +69,7 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-        ])->assignRole('Admin');
+            'profile_url'=>"imagenes/sin-perfil.jpg",
+        ])->assignRole('publico');
     }
 }

@@ -50,7 +50,6 @@ class UserController extends Controller
         //se agrega un rol al usuario
         if($request->roles > 0){
             $users->roles()->sync($request->roles);
-            $users->idRol  = $request->roles;
             $users->save();
         }
 
@@ -83,8 +82,7 @@ class UserController extends Controller
         if($user->email <> $request->email)
             $user->email = $request->email;
         //actualiza los roles
-        if($request->roles > 0 && $user->idRol <> $request->roles ){
-            $user->idRol  = $request->roles;
+        if($request->roles > 0 ){
             $user->roles()->sync($request->roles);
         }           
         $user->save(); //guardar cambios de usuario 
@@ -93,8 +91,6 @@ class UserController extends Controller
 
     public function destroy(User $user)
     {
-        $nombreRol = DB::table('roles')->where('id', '=', $user->idRol)->value('name');
-        $user->removeRole($nombreRol);
         $user->delete();
         
         return redirect()->route('users.index');

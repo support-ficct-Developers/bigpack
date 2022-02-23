@@ -72,7 +72,7 @@ class SemestreController extends Controller
     {
         $materias = DB::table('materias')->where('id_semestre',$request)->get();
         return view('materia.index',compact('materias'));
-    }
+    } 
     /**
      * Show the form for editing the specified resource.
      *

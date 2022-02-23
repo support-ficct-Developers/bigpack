@@ -11,12 +11,12 @@ class Materia extends Model
     protected $table = "materias";
     protected $fillable = ['id_semestre','nombre','sigla'];
 
-    public function semetre(){
-        return $this->belongsTo('App\Models\Semestre', 'id_semestre');
+    public function semestre(){
+        return $this->belongsTo('App\Models\Semestre','id_semestre');
     }
 
-    public function pack(){
-        return $this->hasMany('App\Models\Pack');
+    public function packs(){
+        return $this->hasMany('App\Models\Pack','id_materia');
     }
 
 }

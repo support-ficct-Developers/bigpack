@@ -16,6 +16,7 @@ class Pack extends Model
     }
 
     public function docente(){
-        return $this->belongsTo('App\Models\Materia', 'id_docente');
+        return $this->belongsTo('App\Models\Docente', 'id_docente');
     }
+
 }
