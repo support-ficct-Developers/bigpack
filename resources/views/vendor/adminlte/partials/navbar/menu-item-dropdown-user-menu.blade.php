@@ -16,14 +16,15 @@
 <li class="nav-item dropdown user-menu">
 
     {{-- User menu toggler --}}
-    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
-        <img src="{{ Auth::user()->profile_url }}"
-                class="user-image img-circle elevation-2"
-                alt="{{ Auth::user()->name }}">
-        <span @if(config('adminlte.usermenu_image')) class="d-none d-md-inline" @endif>
-            {{ Auth::user()->name }}
-        </span>
-    </a>
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+            <img src="{{ asset(Auth::user()->profile_url) }}"
+                    class="user-image img-circle elevation-2"
+                    alt="{{ Auth::user()->name }}">
+            <span @if(config('adminlte.usermenu_image')) class="d-none d-md-inline" @endif>
+                {{ Auth::user()->name }}
+            </span>
+        </a>
+    
 
     {{-- User menu dropdown --}}
     <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
@@ -92,7 +93,5 @@
                 {{ csrf_field() }}
             </form>
         </li>
-
     </ul>
-
 </li>

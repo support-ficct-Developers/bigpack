@@ -29,6 +29,8 @@
             @else
                 @include('adminlte::partials.navbar.menu-item-logout-link')
             @endif
+        @else
+            @include('adminlte::partials.navbar.menu-item-dropdown-no-user-menu')
         @endif
 
         {{-- Right sidebar toggler link --}}
