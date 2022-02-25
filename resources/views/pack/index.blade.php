@@ -24,7 +24,7 @@
             <th scope="col">ID</th>
             <th scope="col">Materia</th>
             <th scope="col">Docente</th>
-            <th scope="col">Link</th>
+            <th scope="col" width="10%">Link</th>
             <th scope="col">Descripcion</th>
             <th scope="col" width="15%">Acciones</th>
             {{-- <th colspan=""></th> --}}
