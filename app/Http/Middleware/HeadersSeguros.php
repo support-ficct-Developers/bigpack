@@ -23,7 +23,7 @@ class HeadersSeguros
         $response->headers->set('X-XSS-Protection', '1; mode=block');
         $response->headers->set('X-Frame-Options', 'SAMEORIGIN');
         $response->headers->set('Strict-Transport-Security', 'max-age:31536000; includeSubDomains');
-        $response->headers->set('Content-Security-Policy', "style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"); // Esta cabecera si depende mucho de tu aplicación (Leer más después del código)
+        //$response->headers->set('Content-Security-Policy', "style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"); // Esta cabecera si depende mucho de tu aplicación (Leer más después del código)
         return $response;
     }
     private function removerCabecerasNoAdmitidas($listaCabeceras)
