@@ -25,7 +25,7 @@ class HeadersSeguros
         $response->headers->set('Strict-Transport-Security', 'max-age:31536000; includeSubDomains');
         //$response->headers->set('Content-Security-Policy', "style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'"); // Esta cabecera si depende mucho de tu aplicación (Leer más después del código)
         $response->headers->set('Content-Security-Policy', "style-src 'self' fonts.googleapis.com unicons.iconscout.com cdn.datatables.net; script-src 'self' 'unsafe-inline' unpkg.com pagead2.googlesyndication.com cdn.datatables.net code.jquery.com"); // Esta cabecera si depende mucho de tu aplicación (Leer más después del código)
-        
+        //xd
         return $response;
     }
     private function removerCabecerasNoAdmitidas($listaCabeceras)
