@@ -81,4 +81,11 @@ class AuxiliarController extends Controller
         $auxiliare->delete();
         return redirect()->route('auxiliares.index');
     }
+
+    /* FUNCIONES PARA LA API */
+    public function getAuxiliares()
+    {
+        $auxs = Auxiliar::all();
+        return $auxs;
+    }
 }

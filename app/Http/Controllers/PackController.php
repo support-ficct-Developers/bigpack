@@ -113,4 +113,14 @@ class PackController extends Controller
         $pack->delete();
         return redirect()->route('packs.index');
     }
+    /* FUNCIONES PARA LA API */
+    public function getPacks()
+    {
+        $packs = DB::table('packs')
+                     ->join('docentes', 'docentes.id', '=', 'packs.id_docente')
+                     ->join('materias', 'materias.id', '=', 'packs.id_materia')
+                     ->select('packs.id','docentes.nombre as docente','materias.nombre as materia','packs.link','packs.descripcion','packs.user_id as usuario')
+                     ->get();
+        return $packs;
+    }
 }
