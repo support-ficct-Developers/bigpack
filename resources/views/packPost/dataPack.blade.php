@@ -13,8 +13,13 @@
                 <div class="pack_content">
                     <div class="semestres_modal-content">
                         <h4 class="semestres_modal-title">Docente: {{$pack->docente->nombre}}</h4>
-                        
                         <h3 class="semestres_title">Descripción: {{$pack->descripcion}}</h3>
+                        @if ($pack->user_id!=null)
+                        <h5 class="semestres_title">
+                            Autor: {{$pack->user->name}}
+                        </h5>
+                        @endif
+                        
                         {{--  <ul class="semestres_modal-semestres">
                             <li class="semestres_modal-service">
                                 <i class="uil uil-check-circle semestres_modal-icon"></i>

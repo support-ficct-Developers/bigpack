@@ -5,7 +5,7 @@
 </li>
 
 <li class="nav-item dropdown user-menu">
-    <a href="#" class="nav-link dropdown-toggle" >
+    <a href="{{route('register')}}" class="nav-link dropdown-toggle" >
         <span>Registrate</span>
     </a>
 </li>

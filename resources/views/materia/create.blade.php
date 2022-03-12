@@ -10,7 +10,7 @@
 <div class="card">
     <div class="card-body">
         <form method="post" action="{{route('materias.store')}}" novalidate >
-
+            @csrf
             <h5>Semestre:</h5>
             <select name = "id_semestre" id="id_semestre" class="form-control" onchange="habilitar()" >
                 <option value="nulo">Seleccione el semestre</option>

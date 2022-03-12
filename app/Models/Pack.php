@@ -19,4 +19,8 @@ class Pack extends Model
         return $this->belongsTo('App\Models\Docente', 'id_docente');
     }
 
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    } 
+
 }

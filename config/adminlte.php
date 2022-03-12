@@ -280,6 +280,15 @@ return [
             'icon_color'=>'primary',
             'can' => 'users.index'
         ],
+
+        [
+            'text' => 'Habilitar Packs',
+            'url'  => 'packs-habilitar',
+            'icon' => 'fas fa-check',
+            'icon_color'=>'primary',
+            'can' => 'packs.index'
+        ],
+        
         //------------------------------------------------------------------
         [
             'text'    => 'Agregar',
@@ -309,6 +318,8 @@ return [
 
             ],
         ],
+        
+
         ['header' => 'ACCESOS RÁPIDOS'],
         [
             'text'       => 'Auxiliares',

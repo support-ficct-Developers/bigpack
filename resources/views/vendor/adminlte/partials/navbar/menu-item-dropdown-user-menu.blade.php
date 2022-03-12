@@ -61,15 +61,17 @@
 
         {{-- User menu footer --}}
         <li class="user-footer">
-                <a href="#" class="btn btn-default btn-flat float-right">
-                    <i class="fa fa-fw fa-user"></i>
-                    {{ __('adminlte::menu.profile') }}
-                </a>
+            <a class="btn btn-default btn-flat float-right @if(!$profile_url) btn-block @endif"
+                href="{{route('user.show')}}" >
+                <i class="fa fa-fw fa-user"></i>
+                {{ __('Perfil') }}
+            </a>
         </li>
 
         <li class="user-footer">
-            <a href="#" class="btn btn-default btn-flat float-right">
-                <i class="fa fa-fw fa-user"></i>
+            <a class="btn btn-default btn-flat float-right @if(!$profile_url) btn-block @endif"
+                href="{{route('packs.show2')}}">
+                
                 {{ __('Agregar Packs') }}
             </a>
         </li>

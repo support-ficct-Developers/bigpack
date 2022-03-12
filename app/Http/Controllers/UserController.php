@@ -16,6 +16,7 @@ class UserController extends Controller
         $this->middleware('can:users.index')->only('index');
         $this->middleware('can:users.create')->only('create', 'store');
         $this->middleware('can:users.edit')->only('edit', 'update');
+        $this->middleware('can:publico')->only('show2', 'update2');
         $this->middleware('can:users.destroy')->only('destroy');
     }
     public function index()
@@ -26,13 +27,13 @@ class UserController extends Controller
                      ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
                      ->select('users.*', 'roles.name as roles_name')
                      ->get();
-        return view('user.index', compact('users'));
+        return view('users.index', compact('users'));
     }
 
     public function create()
     {
         $roles = DB::table('roles')->get();
-        return view('user.create', compact('roles'));
+        return view('users.create', compact('roles'));
     }
 
 
@@ -44,6 +45,7 @@ class UserController extends Controller
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
+            'profile_url'=>"imagenes/sin-perfil.jpg",
             //'password' =>$request['password'], no oculta contraseña
         ]);
         
@@ -61,10 +63,38 @@ class UserController extends Controller
         //
     }
 
+    public function show2()
+    {
+        $user=User::find(auth()->user()->id);
+        return view('user.edit',compact('user'));
+    }
+    public function update2(Request $request)
+    {
+        date_default_timezone_set("America/La_Paz");
+
+        $user=User::find(auth()->user()->id);
+       //actualiza nombre
+       if($user->name <> $request->name){
+            $user->name = $request->name;
+        }
+        //actualiza email
+        if($user->email <> $request->email){
+            $user->email = $request->email;
+        }
+        //actualiza contraseña
+        if($request->password <> ''){
+            $user->password =password_hash($request->password,PASSWORD_DEFAULT);
+        }
+
+        $user->save();
+        return redirect()->route('user.show')->with('info', 'Se actualizo correctamente');
+    }
+
+
     public function edit(User $user)
     {
         $roles = Role::all();
-        return view('user.edit',compact('user', 'roles') );
+        return view('users.edit',compact('user', 'roles') );
  
     }
 
@@ -86,7 +116,7 @@ class UserController extends Controller
             $user->roles()->sync($request->roles);
         }           
         $user->save(); //guardar cambios de usuario 
-        return redirect()->route('users.edit', $user)->with('info', 'se actualizo el usuario correctamente');;
+        return redirect()->route('users.edit', $user)->with('info', 'se actualizo el usuario correctamente');
     }
 
     public function destroy(User $user)

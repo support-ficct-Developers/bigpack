@@ -3,20 +3,16 @@
 @section('title', 'Packs')
 
 @section('content_header')
-  <h1>LISTA DE PACKS</h1>
+
 @stop
 
 @section('content')
   <div class="card">
     <div class="card-header">
-        {{-- solo los que tienen permiso a esas rutas.metodo podran ver el button --}}
-        @can('packs.create')
-          <a class="btn btn-primary btb-sm" href="{{route('packs.create')}}">Registrar Packs</a>    
-        @endcan
+      <div align="center">
+        <h2><b>PACKS NO HABILITADOS</b></h2>
+      </div>
     </div>
-  </div>
-
-  <div class="card">
     <div class="card-body">
       <table class="table table-striped" id="packs" >
         <thead>
@@ -27,7 +23,6 @@
             <th scope="col" width="15%">Link</th>
             <th scope="col" width="15%">Descripcion</th>
             <th scope="col" width="15%">Autor</th>
-            <th scope="col" width="15%">Estado</th>
             <th scope="col" width="20%">Acciones</th>
             {{-- <th colspan=""></th> --}}
           </tr>
@@ -49,20 +44,13 @@
                     ANONIMO
                 @endif
               </td>
-              <td>
-                @if ($pack->estado)
-                    Habilitado
-                    @else
-                    No Habilitado
-                @endif
-              </td> 
               <td >
-                <form  action="{{route('packs.destroy',$pack)}}" method="post">
+                <form  action="{{route('packs.destroy2',$pack)}}" method="post">
                   @csrf
                   @method('delete')
 
                     @can('packs.edit')
-                      <a class="btn btn-info btn-sm" href="{{route('packs.edit',$pack)}}">Editar</a>                 
+                      <a class="btn btn-info btn-sm" href="{{route('pack.habilitar',$pack)}}">Habilitar</a>                 
                     @endcan
 
                     @can('packs.destroy')
