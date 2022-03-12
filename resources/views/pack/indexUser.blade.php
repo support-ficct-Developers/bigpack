@@ -3,9 +3,7 @@
 @section('title', 'Packs')
 
 @section('content_header')
-  <div align="center">
-    <h1>MIS PACKS</h1>
-  </div>
+  
 @stop
 
 @section('content')
@@ -17,12 +15,17 @@
 @endif
 
 <div class="card">
+  <div class="card-header">
+    <div align="center">
+      <h3><b>Registrar pack</b></h3>
+    </div>
+  </div>
     <div class="card-body">
         <form method="post" action="{{route('packs.store2')}}" novalidate >
           @csrf
             <h5>Materia:</h5>
             <select name = "id_materia" id="id_materia" class="mi-selector form-control" >
-                <option value="nulo">Seleccione la materia </option>
+                <option></option>
                     @foreach ($materias as $materia)
                         <option value="{{$materia->id}}">
                             {{$materia->nombre}}
@@ -31,12 +34,14 @@
             </select>
            
             @error('id_materia')
-                <p>DEBE INGRESAR BIEN LA MATERIA</p>
+              <div class="text-danger">
+                Debe elegir una opción.
+              </div>
             @enderror
 
             <h5>Docente:</h5>
             <select name = "id_docente" id="id_docente" class="mi-selector form-control" >
-                <option value="nulo">Seleccione el docente </option>
+                <option></option>
                     @foreach ($docentes as $docente)
                         <option value="{{$docente->id}}">
                             {{$docente->nombre}}
@@ -45,14 +50,18 @@
             </select>
            
             @error('id_docente')
-                <p>DEBE INGRESAR EL DOCENTE</p>
+              <div class="text-danger">
+                Debe elegir una opción.
+              </div>
             @enderror
 
             @csrf
             <h5>Link:</h5>
             <input type="text"  name="link"  placeholder="drive, mega, youtube, etc.." class="focus border-primary  form-control">
             @error('link')
-                <p>DEBE INGRESAR UN LINK</p>
+              <div class="text-danger">
+                Debe llenar este campo.
+              </div>
             @enderror
             
             @csrf
@@ -68,6 +77,11 @@
 </div>
 
   <div class="card">
+    <div class="card-header">
+      <div align="center">
+        <h3><b>Mis Packs</b></h3>
+      </div>
+    </div>
     <div class="card-body">
       <table class="table table-striped" id="packs" >
         <thead>

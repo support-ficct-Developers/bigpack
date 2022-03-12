@@ -58,6 +58,11 @@ class PackController extends Controller
     public function store(Request $request)
     {
         date_default_timezone_set("America/La_Paz");
+        $request->validate([
+            'id_materia'=>'required',
+            'id_docente'=>'required',
+        ]);
+
         $pack=Pack::create([
             'id_materia'=>request('id_materia'),
             'id_docente'=>request('id_docente'),
@@ -72,6 +77,12 @@ class PackController extends Controller
     public function store2(Request $request)
     {
         date_default_timezone_set("America/La_Paz");
+        $request->validate([
+            'id_materia'=>'required',
+            'id_docente'=>'required',
+            'link'=>'required',
+        ]);
+
         $pack=Pack::create([
             'id_materia'=>request('id_materia'),
             'id_docente'=>request('id_docente'),
