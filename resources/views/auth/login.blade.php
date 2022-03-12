@@ -47,10 +47,11 @@
 
                 <a href="#" class="login__forgot">Olvidaste tu contraseña?</a>
 
-                
-                <button type="submit" class="login__button">
-                    {{ __('Ingresar') }}
-                </button>
+                <div align="center">
+                    <button type="submit" class="login__button">
+                        {{ __('Ingresar') }}
+                    </button>
+                </div>
 
                 <div>
                     <span class="login__account">No tienes una cuenta?</span>
