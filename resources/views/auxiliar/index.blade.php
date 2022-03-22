@@ -18,6 +18,7 @@
 
   <div class="card">
     <div class="card-body">
+      <div class="table-responsive">
       <table class="table table-striped" id="auxiliar" >
         <thead>
           <tr>
@@ -62,6 +63,7 @@
         </tbody> 
 
       </table>
+    </div>
     </div>
   </div>
 @stop

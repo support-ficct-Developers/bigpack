@@ -17,7 +17,6 @@ class PackController extends Controller
         $this->middleware('can:publico')->only('create','store');
         $this->middleware('can:packs.edit')->only('edit', 'update','habilitar');
         $this->middleware('can:packs.destroy')->only('destroy','destroy2');
-       
     }
 
     public function index()

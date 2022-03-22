@@ -18,65 +18,69 @@
 
   <div class="card">
     <div class="card-body">
-      <table class="table table-striped" id="packs" >
-        <thead>
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col" width="15%">Materia</th>
-            <th scope="col" width="15%">Docente</th>
-            <th scope="col" width="15%">Link</th>
-            <th scope="col" width="15%">Descripcion</th>
-            <th scope="col" width="15%">Autor</th>
-            <th scope="col" width="15%">Estado</th>
-            <th scope="col" width="20%">Acciones</th>
-            {{-- <th colspan=""></th> --}}
-          </tr>
-        </thead>
-        
-        <tbody>
-
-          @foreach ($packs as $pack)
+      <div class="table-responsive">
+        <table class="table table-striped" id="packs" >
+          <thead>
             <tr>
-              <td>{{$pack->id}}</td>
-              <td>{{$pack->materia->nombre}}</td>
-              <td>{{$pack->docente->nombre}}</td>
-              <td>{{$pack->link}}</td>
-              <td>{{$pack->descripcion}}</td>
-              <td>
-                @if ($pack->user_id!=null)
-                  {{$pack->user->name}}
-                @else
-                    ANONIMO
-                @endif
-              </td>
-              <td>
-                @if ($pack->estado)
-                    Habilitado
-                    @else
-                    No Habilitado
-                @endif
-              </td> 
-              <td >
-                <form  action="{{route('packs.destroy',$pack)}}" method="post">
-                  @csrf
-                  @method('delete')
-
-                    @can('packs.edit')
-                      <a class="btn btn-info btn-sm" href="{{route('packs.edit',$pack)}}">Editar</a>                 
-                    @endcan
-
-                    @can('packs.destroy')
-                    <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
-                    value="Borrar">Eliminar</button>
-                    @endcan  
-
-                </form>
-              </td>    
+              <th scope="col">ID</th>
+              <th scope="col" width="15%">Materia</th>
+              <th scope="col" width="15%">Docente</th>
+              <th scope="col" width="15%">Link</th>
+              <th scope="col" width="15%">Descripcion</th>
+              <th scope="col" width="15%">Autor</th>
+              <th scope="col" width="15%">Estado</th>
+              <th scope="col" width="20%">Acciones</th>
+              {{-- <th colspan=""></th> --}}
             </tr>
-          @endforeach
-        </tbody> 
+          </thead>
+          
+          <tbody>
+  
+            @foreach ($packs as $pack)
+              <tr>
+                <td>{{$pack->id}}</td>
+                <td>{{$pack->materia->nombre}}</td>
+                <td>{{$pack->docente->nombre}}</td>
+                <td>{{$pack->link}}</td>
+                <td>{{$pack->descripcion}}</td>
+                <td>
+                  @if ($pack->user_id!=null)
+                    {{$pack->user->name}}
+                  @else
+                      ANONIMO
+                  @endif
+                </td>
+                <td>
+                  @if ($pack->estado)
+                      Habilitado
+                      @else
+                      No Habilitado
+                  @endif
+                </td> 
+                <td >
+                  <form  action="{{route('packs.destroy',$pack)}}" method="post">
+                    @csrf
+                    @method('delete')
+  
+                      @can('packs.edit')
+                        <a class="btn btn-info btn-sm" href="{{route('packs.edit',$pack)}}">Editar</a>                 
+                      @endcan
+  
+                      @can('packs.destroy')
+                      <button class="btn btn-danger btn-sm" onclick="return confirm('¿ESTA SEGURO DE  BORRAR?')" 
+                      value="Borrar">Eliminar</button>
+                      @endcan  
+  
+                  </form>
+                </td>    
+              </tr>
+            @endforeach
+          </tbody> 
+  
+        </table>
 
-      </table>
+      </div>
+      
     </div>
   </div>
 @stop
