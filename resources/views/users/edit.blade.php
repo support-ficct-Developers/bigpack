@@ -13,6 +13,11 @@
             <strong>{{session('info')}}</strong>
         </div>
     @endif
+    @if (session('error'))
+        <div class="alert alert-danger">
+            <strong>{{session('error')}}</strong>
+        </div>
+    @endif
 
     <div class="card">
         <div class="card-body">

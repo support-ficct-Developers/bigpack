@@ -93,6 +93,10 @@ class UserController extends Controller
 
     public function edit(User $user)
     {
+        if ($user->id==2 && $user->id !== auth()->user()->id){
+            return redirect()->route('users.index')->with('error', 'No Puedes Editar los datos del Admin');
+        }
+
         $roles = Role::all();
         return view('users.edit',compact('user', 'roles') );
  
@@ -100,6 +104,9 @@ class UserController extends Controller
 
     public function update(Request $request, User $user)
     {
+        if ($user->id==2 && $user->id !== auth()->user()->id){
+            return redirect()->route('users.edit', $user)->with('error', 'No Puedes Editar los datos del Admin');
+        }
         //actualiza nombre
         if($user->name <> $request->name){
             $user->name = $request->name;
@@ -121,8 +128,11 @@ class UserController extends Controller
 
     public function destroy(User $user)
     {
+        if ($user->id==2 && $user->id !== auth()->user()->id){
+            return redirect()->route('users.index')->with('error', 'No Puedes eliminar al Admin de Admins');
+        }
+
         $user->delete();
-        
         return redirect()->route('users.index');
     }
 }

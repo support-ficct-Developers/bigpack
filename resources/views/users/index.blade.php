@@ -7,12 +7,21 @@
 @stop
 
 @section('content')
+
+    
+
     <div class="card">
         <div class="card-header">
             <a href="{{route('users.create')}}"class="btn btn-primary btb-sm"> Registrar Usuario</a>
         </div>
     </div>
 
+    @if (session('error'))
+        <div class="alert alert-danger">
+            <strong>{{session('error')}}</strong>
+        </div>
+    @endif
+    
     <div class="card">
         <div class="card-body">
           <div class="table-responsive">
