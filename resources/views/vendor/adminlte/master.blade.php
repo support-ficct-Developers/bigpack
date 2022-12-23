@@ -79,7 +79,7 @@
     <script defer src="https://app.embed.im/snow.js"></script>
 </head>
 
-<body class="@yield('classes_body')" @yield('body_data')>
+<body class="dark-theme @yield('classes_body')" @yield('body_data')>
 
     {{-- Body Content --}}
     @yield('body')
