@@ -76,7 +76,7 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="{{ asset('favicon/ms-icon-144x144.png') }}">
     @endif
-
+    <script defer src="https://app.embed.im/snow.js"></script>
 </head>
 
 <body class="@yield('classes_body')" @yield('body_data')>

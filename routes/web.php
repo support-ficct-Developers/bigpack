@@ -26,7 +26,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('docentes',DocenteController::class);
+Route::resource('docentes', DocenteController::class);
 Route::resource('materias',MateriaController::class);
 Route::resource('packs',PackController::class);
 Route::get('packs-user',[PackController::class,'show2'])->name('packs.show2');

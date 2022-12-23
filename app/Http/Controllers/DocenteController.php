@@ -19,7 +19,7 @@ class DocenteController extends Controller
     {
         $docentes = Docente::all();
         return view('docente.index',compact('docentes'));
- }
+    }
 
     /**
      * Show the form for creating a new resource.
