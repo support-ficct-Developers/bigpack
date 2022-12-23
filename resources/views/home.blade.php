@@ -5,20 +5,17 @@
 @section('content_header')
     <meta name=description content="Packs Support academico de todas las materias 1er semestre a 9no semestre">
     <meta name=author content="Aprende+">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8737715429027255"
+        crossorigin="anonymous"></script>
 @stop
 
 @section('content')
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Support</title>
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8737715429027255"
-            crossorigin="anonymous"></script>
-    </head>
-
-    <body>
+    <body class="dark-theme">
         <!--==================== MAIN ====================-->
         <main class="main">
             <!--==================== HOME ====================-->
