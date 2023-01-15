@@ -5,9 +5,6 @@ use Closure;
 
 class HeadersSeguros
 {
-    // Podrías checar la siguiente página para más información acerca de estas cabeceras
-    // https://securityheaders.com/
-
     // Lista las cabeceras que no quieras en tus respuestas de tu aplicación
     // Hay cabeceras que no es recomendable que se muestren, por ejemplo "X-Powered-BY" muestra información del servidor, la puedes editar a tu gusto
     private $headersNoAdmitidos = [
