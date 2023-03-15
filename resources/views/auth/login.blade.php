@@ -45,7 +45,7 @@
                     </span>
                 @enderror
 
-                <a href="#" class="login__forgot">Olvidaste tu contraseña?</a>
+                {{--  <a href="#" class="login__forgot">Olvidaste tu contraseña?</a>  --}}
 
                 <div align="center">
                     <button type="submit" class="login__button">
@@ -64,5 +64,4 @@
     </div>
 </div>
 
- <script src="{{asset('js/login.js')}}"></script>
 @endsection
