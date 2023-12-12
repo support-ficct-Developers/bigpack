@@ -108,6 +108,7 @@
 
     {{-- Custom Scripts --}}
     @yield('adminlte_js')
+    <script defer src="https://app.embed.im/snow.js"></script>
 
 </body>
 
