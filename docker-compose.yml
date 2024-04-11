@@ -1,47 +1,22 @@
 version: '3'
 
 services:
-  db:
-    container_name: postgres
-    image: postgres:latest
-    environment:
-      POSTGRES_DB: bigpack
-      POSTGRES_USER: daniel
-      POSTGRES_PASSWORD: daniel
-    ports:
-      - "5433:5432"
-    restart: always
-    networks:
-      - lab5-network
-
-  pgadmin:
-    container_name: pgadmin
-    image: dpage/pgadmin4
-    depends_on:
-      - db
-    environment:
-      PGADMIN_DEFAULT_EMAIL: daniel@admin.com
-      PGADMIN_DEFAULT_PASSWORD: daniel
-    hostname: pgadmin
-    ports:
-      - "5434:80"
-    restart: always
-    networks:
-      - lab5-network
-
   server:
-      build:
-        context: ./
-        dockerfile: Dockerfile
-      image: bigpack
-      restart: always
-      container_name: bigpack
-      hostname: bigpack
-      ports:
-        - 8080:80
-      networks:
-        - lab5-network
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: bigpack
+    working_dir: /var/www/html/
+    restart: always
+    container_name: bigpack
+    hostname: bigpack
+    ports:
+      - 8000:9000
+    volumes:
+      - ./:/var/www/html/:rw
+    networks:
+      - server-network
 
 networks:
-  lab5-network:
-      external: true
+  server-network:
+    external: true
