@@ -170,6 +170,18 @@
                             <i class="uil uil-arrow-from-right button_icon"></i>
                         </span>
                     </div>
+                    <!--==================== Modalidad ====================-->
+                    <div class="semestres_content">
+                        <div>
+                            <img src="{{ asset('imagenes/logo.png') }}" alt="" class="semestres__img">
+                            <h3 class="semestres_title">Modalidad de Graduacion</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link semestres_button">
+                            <a href="{{ route('postMaterias', 11) }}" class="button--link">Ver más</a>
+                            <i class="uil uil-arrow-from-right button_icon"></i>
+                        </span>
+                    </div>
             </section>
         </main>
 

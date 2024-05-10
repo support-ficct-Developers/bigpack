@@ -380,6 +380,11 @@ return [
                     'url'  => 'postMaterias/10',
                     'icon'    => 'fas fa-lightbulb',
                 ],
+                [
+                    'text' => 'Mod. de Graduacion',
+                    'url'  => 'postMaterias/11',
+                    'icon'    => 'fas fa-lightbulb',
+                ],
 
             ],
         ],
