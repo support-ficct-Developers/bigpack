@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="home_img">
-                            <img src="{{ asset('imagenes/julio.png') }}" alt="" data-speed="-2" class="move">
+                            <img src="{{ asset('imagenes/logo.png') }}" alt="" data-speed="-2" class="move">
                         </div>
                         <div class="home_data">
                             <h1 class="home_title">Support<br><span class="home__title-color">FICCT</span></h1>
