@@ -25,6 +25,7 @@
             <th scope="col" width="15%">Link</th>
             <th scope="col" width="15%">Descripcion</th>
             <th scope="col" width="15%">Autor</th>
+            <th scope="col" width="15%">Fecha</th>
             <th scope="col" width="20%">Acciones</th>
             {{-- <th colspan=""></th> --}}
           </tr>
@@ -46,6 +47,7 @@
                     ANONIMO
                 @endif
               </td>
+              <td>{{$pack->created_at}}</td>
               <td >
                 <form  action="{{route('packs.destroy2',$pack)}}" method="post">
                   @csrf
