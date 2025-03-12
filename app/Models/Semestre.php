@@ -12,9 +12,8 @@ class Semestre extends Model
     protected $table = "semestres";
     protected $fillable = ['nombre'];
 
-    public function materias(){
-        return $this->hasMany('App\Models\Materia','id_semestre');
+    public function materias()
+    {
+        return $this->hasMany(Materia::class, 'id_semestre');
     }
-
-
 }

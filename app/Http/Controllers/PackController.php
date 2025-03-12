@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Pack;
 use App\Models\Materia;
 use App\Models\Docente;
+use App\Models\Semestre;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -177,10 +178,25 @@ class PackController extends Controller
             ->join('docentes', 'docentes.id', '=', 'packs.id_docente')
             ->join('materias', 'materias.id', '=', 'packs.id_materia')
             ->leftJoin('users', 'users.id', 'packs.user_id')
-            ->select('packs.id', 'docentes.nombre as docente', 'materias.nombre as materia', 'materias.sigla', 'packs.link', 'packs.descripcion', 'users.name as usuario')
+            ->leftJoin('semestres', 'semestres.id', 'materias.id_semestre')
+            ->select('packs.id', 'materias.nombre as materia', 'materias.sigla', 'packs.link', 'packs.descripcion', 'semestres.nombre as semestre', 'docentes.nombre as docente', 'users.name as usuario', 'packs.created_at')
             ->orderby('materias.id_semestre', 'asc')
             ->orderby('materias.nombre', 'asc')
             ->get();
         return $packs;
+    }
+
+    public function getPacksSemestres()
+    {
+        return Semestre::select('semestres.id', 'semestres.nombre')
+            ->with('materias', function ($query) {
+                $query->select('materias.id_semestre', 'materias.id', 'materias.nombre', 'materias.sigla')
+                    ->with('packs', function ($query) {
+                        $query->select('packs.id_materia', 'packs.link', 'packs.descripcion', 'packs.created_at', 'docentes.nombre as docente', 'users.name as usuario')
+                            ->leftjoin('users', 'users.id', 'packs.user_id')
+                            ->leftjoin('docentes', 'docentes.id', 'packs.id_docente')
+                            ->orderby('packs.created_at', 'desc');
+                    });
+            })->get();
     }
 }

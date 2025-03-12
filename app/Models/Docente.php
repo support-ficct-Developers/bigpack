@@ -11,8 +11,8 @@ class Docente extends Model
     protected $table = "docentes";
     protected $fillable = ['nombre'];
 
-    public function packs(){
-        return $this->hasMany('App\Models\Pack','id_docente');
+    public function packs()
+    {
+        return $this->hasMany(Pack::class, 'id_docente');
     }
-
 }

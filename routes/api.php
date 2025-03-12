@@ -20,4 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('packs',[PackController::class,'getPacks']);
+Route::get('packs/semestres',[PackController::class,'getPacksSemestres']);
 Route::get('auxiliares',[AuxiliarController::class,'getAuxiliares']);

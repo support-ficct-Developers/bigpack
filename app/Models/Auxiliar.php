@@ -9,9 +9,10 @@ class Auxiliar extends Model
 {
     use HasFactory;
     protected $table = "auxiliars";
-    protected $guarded = ['id','created_at'];
+    protected $guarded = ['id', 'created_at'];
 
-    public function materia(){
-        return $this->belongsTo('App\Models\Materia', 'id_materia');
+    public function materia()
+    {
+        return $this->belongsTo(Materia::class, 'id_materia');
     }
 }

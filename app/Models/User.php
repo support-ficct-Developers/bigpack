@@ -16,7 +16,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
-    
+
     use HasRoles;
     /**
      * The attributes that are mass assignable.
@@ -49,7 +49,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function packs(){
-        return $this->hasMany('App\Models\Pack');
+    public function packs()
+    {
+        return $this->hasMany(Pack::class, 'user_id');
     }
 }

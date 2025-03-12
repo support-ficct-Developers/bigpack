@@ -9,14 +9,15 @@ class Materia extends Model
 {
     use HasFactory;
     protected $table = "materias";
-    protected $fillable = ['id_semestre','nombre','sigla'];
+    protected $fillable = ['id_semestre', 'nombre', 'sigla'];
 
-    public function semestre(){
-        return $this->belongsTo('App\Models\Semestre','id_semestre');
+    public function semestre()
+    {
+        return $this->belongsTo(Semestre::class, 'id_semestre');
     }
 
-    public function packs(){
-        return $this->hasMany('App\Models\Pack','id_materia');
+    public function packs()
+    {
+        return $this->hasMany(Pack::class, 'id_materia');
     }
-
 }
