@@ -179,6 +179,7 @@ class PackController extends Controller
             ->leftJoin('users', 'users.id', 'packs.user_id')
             ->select('packs.id', 'docentes.nombre as docente', 'materias.nombre as materia', 'materias.sigla', 'packs.link', 'packs.descripcion', 'users.name as usuario')
             ->orderby('materias.id_semestre', 'asc')
+            ->orderby('materias.nombre', 'asc')
             ->get();
         return $packs;
     }
