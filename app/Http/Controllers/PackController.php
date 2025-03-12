@@ -13,27 +13,28 @@ class PackController extends Controller
 {
     public function __construct()
     {   //               ('can:materias.index') aprobando permiso, ->only('index') solo para el metodo index
-        $this->middleware('can:packs.index')->only('index','indexHabilitar');
-        $this->middleware('can:publico')->only('create','store');
-        $this->middleware('can:packs.edit')->only('edit', 'update','habilitar');
-        $this->middleware('can:packs.destroy')->only('destroy','destroy2');
+        $this->middleware('can:packs.index')->only('index', 'indexHabilitar');
+        $this->middleware('can:publico')->only('create', 'store');
+        $this->middleware('can:packs.edit')->only('edit', 'update', 'habilitar');
+        $this->middleware('can:packs.destroy')->only('destroy', 'destroy2');
     }
 
     public function index()
     {
-        $packs=Pack::all();  
-        return view('pack.index',compact('packs'));
+        $packs = Pack::all();
+        return view('pack.index', compact('packs'));
     }
     public function indexHabilitar()
     {
-        $packs=Pack::where('estado',false)->orWhere('estado',null)->get();  
-        return view('pack.indexHabilitar',compact('packs'));
+        $packs = Pack::where('estado', false)->orWhere('estado', null)->get();
+        return view('pack.indexHabilitar', compact('packs'));
     }
-    public function indexPost(Request $request, $idMateria){
+    public function indexPost(Request $request, $idMateria)
+    {
         //$packs = Materia::find($idMateria)->packs;
-        $packs = Materia::find($idMateria)->packs->where('estado',true);
-        $materia=Materia::find($idMateria)->nombre;
-        return view('packPost.postPack',compact('packs','materia'));
+        $packs = Materia::find($idMateria)->packs->where('estado', true);
+        $materia = Materia::find($idMateria)->nombre;
+        return view('packPost.postPack', compact('packs', 'materia'));
     }
 
     /**
@@ -45,7 +46,7 @@ class PackController extends Controller
     {
         $materias = DB::table('materias')->get();
         $docentes = DB::table('docentes')->get();
-        return view('pack.create',['materias'=>$materias],['docentes'=>$docentes]);
+        return view('pack.create', ['materias' => $materias], ['docentes' => $docentes]);
     }
 
     /**
@@ -58,17 +59,17 @@ class PackController extends Controller
     {
         date_default_timezone_set("America/La_Paz");
         $request->validate([
-            'id_materia'=>'required',
-            'id_docente'=>'required',
+            'id_materia' => 'required',
+            'id_docente' => 'required',
         ]);
 
-        $pack=Pack::create([
-            'id_materia'=>request('id_materia'),
-            'id_docente'=>request('id_docente'),
-            'link'=>request('link'),
-            'descripcion'=>request('descripcion'),
-            'user_id'=>auth()->user()->id,
-            'estado'=>1,
+        $pack = Pack::create([
+            'id_materia' => request('id_materia'),
+            'id_docente' => request('id_docente'),
+            'link' => request('link'),
+            'descripcion' => request('descripcion'),
+            'user_id' => auth()->user()->id,
+            'estado' => 1,
         ]);
         return redirect()->route('packs.index')->with('info', 'Pack agregado correctamente');;
     }
@@ -77,18 +78,18 @@ class PackController extends Controller
     {
         date_default_timezone_set("America/La_Paz");
         $request->validate([
-            'id_materia'=>'required',
-            'id_docente'=>'required',
-            'link'=>'required',
+            'id_materia' => 'required',
+            'id_docente' => 'required',
+            'link' => 'required',
         ]);
 
-        $pack=Pack::create([
-            'id_materia'=>request('id_materia'),
-            'id_docente'=>request('id_docente'),
-            'link'=>request('link'),
-            'descripcion'=>request('descripcion'),
-            'user_id'=>auth()->user()->id,
-            'estado'=>false,
+        $pack = Pack::create([
+            'id_materia' => request('id_materia'),
+            'id_docente' => request('id_docente'),
+            'link' => request('link'),
+            'descripcion' => request('descripcion'),
+            'user_id' => auth()->user()->id,
+            'estado' => false,
         ]);
         return redirect()->route('packs.show2')->with('info', 'Pack agregado correctamente');;
     }
@@ -101,15 +102,15 @@ class PackController extends Controller
      */
     public function show(Pack $pack)
     {
-        return view('pack.show',compact ('pack'));
+        return view('pack.show', compact('pack'));
     }
     public function show2()
     {
         $materias = DB::table('materias')->get();
         $docentes = DB::table('docentes')->get();
-        $user=User::find(auth()->user()->id);
-        $packs=$user->packs;
-        return view('pack.indexUser',compact('packs','materias','docentes'));
+        $user = User::find(auth()->user()->id);
+        $packs = $user->packs;
+        return view('pack.indexUser', compact('packs', 'materias', 'docentes'));
     }
 
     /**
@@ -122,7 +123,7 @@ class PackController extends Controller
     {
         $materias = DB::table('materias')->get();
         $docentes = DB::table('docentes')->get();
-        return view('pack.edit',compact('pack','materias','docentes'));
+        return view('pack.edit', compact('pack', 'materias', 'docentes'));
     }
 
     /**
@@ -135,10 +136,10 @@ class PackController extends Controller
     public function update(Request $request, Pack $pack)
     {
         date_default_timezone_set("America/La_Paz");
-        $pack->id_materia=$request->id_materia;
-        $pack->id_docente=$request->id_docente;
-        $pack->link=$request->link;
-        $pack->descripcion=$request->descripcion;
+        $pack->id_materia = $request->id_materia;
+        $pack->id_docente = $request->id_docente;
+        $pack->link = $request->link;
+        $pack->descripcion = $request->descripcion;
         $pack->save();
 
         return redirect()->route('packs.index');
@@ -147,7 +148,7 @@ class PackController extends Controller
     {
         date_default_timezone_set("America/La_Paz");
         $pack->update([
-            'estado'=>true,
+            'estado' => true,
         ]);
         return redirect()->route('packs.habilitar');
     }
@@ -173,10 +174,11 @@ class PackController extends Controller
     public function getPacks()
     {
         $packs = DB::table('packs')
-                     ->join('docentes', 'docentes.id', '=', 'packs.id_docente')
-                     ->join('materias', 'materias.id', '=', 'packs.id_materia')
-                     ->select('packs.id','docentes.nombre as docente','materias.nombre as materia','packs.link','packs.descripcion','packs.user_id as usuario')
-                     ->get();
+            ->join('docentes', 'docentes.id', '=', 'packs.id_docente')
+            ->join('materias', 'materias.id', '=', 'packs.id_materia')
+            ->leftJoin('users', 'users.id', 'packs.user_id')
+            ->select('packs.id', 'docentes.nombre as docente', 'materias.nombre as materia', 'materias.sigla', 'packs.link', 'packs.descripcion', 'uses.name as usuario')
+            ->get();
         return $packs;
     }
 }
