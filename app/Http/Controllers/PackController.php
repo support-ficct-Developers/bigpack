@@ -177,7 +177,7 @@ class PackController extends Controller
             ->join('docentes', 'docentes.id', '=', 'packs.id_docente')
             ->join('materias', 'materias.id', '=', 'packs.id_materia')
             ->leftJoin('users', 'users.id', 'packs.user_id')
-            ->select('packs.id', 'docentes.nombre as docente', 'materias.nombre as materia', 'materias.sigla', 'packs.link', 'packs.descripcion', 'uses.name as usuario')
+            ->select('packs.id', 'docentes.nombre as docente', 'materias.nombre as materia', 'materias.sigla', 'packs.link', 'packs.descripcion', 'users.name as usuario')
             ->get();
         return $packs;
     }
