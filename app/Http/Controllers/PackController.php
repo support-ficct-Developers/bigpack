@@ -172,17 +172,27 @@ class PackController extends Controller
         return redirect()->route('packs.habilitar');
     }
     /* FUNCIONES PARA LA API */
-    public function getPacks()
+    public function getPacks(Request $request)
     {
         $packs = DB::table('packs')
-            ->join('docentes', 'docentes.id', '=', 'packs.id_docente')
+            ->select('packs.id', 'materias.id as id_materia', 'materias.nombre as materia',  'materias.sigla', 'packs.link', 'packs.descripcion', 'semestres.nombre as semestre', 'docentes.id as id_docente', 'docentes.nombre as docente', 'users.name as usuario', 'packs.created_at')
             ->join('materias', 'materias.id', '=', 'packs.id_materia')
+            ->leftjoin('docentes', 'docentes.id', '=', 'packs.id_docente')
             ->leftJoin('users', 'users.id', 'packs.user_id')
             ->leftJoin('semestres', 'semestres.id', 'materias.id_semestre')
-            ->select('packs.id', 'materias.nombre as materia', 'materias.sigla', 'packs.link', 'packs.descripcion', 'semestres.nombre as semestre', 'docentes.nombre as docente', 'users.name as usuario', 'packs.created_at')
             ->orderby('materias.id_semestre', 'asc')
-            ->orderby('materias.nombre', 'asc')
-            ->get();
+            ->orderby('materias.nombre', 'asc');
+
+        if ($request->id_materia) {
+            $packs = $packs->where('packs.id_materia', $request->id_materia);
+        }
+
+        if ($request->id_docente && $request->id_docente != '-1') {
+            $packs = $packs->where('packs.id_docente', $request->id_docente);
+        }
+
+        $packs = $packs->get();
+
         return $packs;
     }
 
@@ -196,6 +206,20 @@ class PackController extends Controller
                             ->leftjoin('users', 'users.id', 'packs.user_id')
                             ->leftjoin('docentes', 'docentes.id', 'packs.id_docente')
                             ->orderby('packs.created_at', 'desc');
+                    });
+            })->get();
+    }
+
+    public function getSemestresMaterias()
+    {
+        return Semestre::select('semestres.id', 'semestres.nombre')
+            ->with('materias', function ($query) {
+                $query->select('materias.id_semestre', 'materias.id', 'materias.nombre', 'materias.sigla')
+                    ->with('packs', function ($query) {
+                        $query->select('packs.id_materia', 'docentes.nombre as docente', 'docentes.id as id_docente')
+                            ->leftjoin('docentes', 'docentes.id', 'packs.id_docente')
+                            ->orderby('docentes.nombre', 'asc')
+                            ->groupby('packs.id_materia', 'docentes.nombre', 'docentes.id');
                     });
             })->get();
     }
