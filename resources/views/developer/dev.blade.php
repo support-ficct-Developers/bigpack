@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Support - Aprende Mas')
+@section('title', 'FicctSoft - Aprende Mas')
 
 @section('content_header')
     <meta charset="UTF-8">

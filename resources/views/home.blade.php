@@ -1,13 +1,13 @@
 ﻿@extends('adminlte::page')
 
-@section('title', 'Support')
+@section('title', 'FicctSoft')
 
 @section('content_header')
-    <meta name=description content="Packs Support academico de todas las materias 1er semestre a 9no semestre">
+    <meta name=description content="Packs FicctSoft academico de todas las materias 1er semestre a 9no semestre">
     <meta name=author content="Aprende+">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support</title>
+    <title>FicctSoft</title>
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8737715429027255"
         crossorigin="anonymous"></script>
@@ -38,7 +38,7 @@
                             <img src="{{ asset('imagenes/logo.png') }}" alt="" data-speed="-2" class="move">
                         </div>
                         <div class="home_data">
-                            <h1 class="home_title">Support<br><span class="home__title-color">FICCT</span></h1>
+                            <h1 class="home_title">FicctSoft<br><span class="home__title-color">FICCT</span></h1>
                             <div id="typewriter"></div>
                             <p class="home_description">Hola, Aquí encontraras links a repositorios de material de apoyo
                                 para todas las materias de la Facultad de Ingeniera en Ciencias de la Computación.</p>
@@ -191,7 +191,7 @@
                 <div class="footer__content">
                     <div class="footer_container container grid">
                         <div>
-                            <h1 class="footer_title">Support </h1>
+                            <h1 class="footer_title">Ficct-Soft </h1>
                             <h1 class="footer_title">Aprende+</h1>
                             {{--   <img src="imagenes/logo.png" alt="" class="footer__img">
                 <image class="footer__img" width="25%" height="25%" src="{{asset('imagenes/logowhite.png')}}"/>  --}}
@@ -227,7 +227,7 @@
                         </div>
                     </div>
                 </div>
-                <p class="footer_copy">&#169; SUPPORT. Todos los derechos Reservados</p>
+                <p class="footer_copy">&#169; FICCTSOFT. Todos los derechos Reservados</p>
             </div>
         </footer>
         <!--==================== SCROLL TOP ====================-->

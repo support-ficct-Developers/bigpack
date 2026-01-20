@@ -29,7 +29,7 @@
             <div class="footer__content">
             <div class="footer_container container grid">
                 <div>
-                    <h1 class="footer_title">Support </h1>
+                    <h1 class="footer_title">FicctSoft </h1>
                     <h1 class="footer_title">Aprende+</h1>
                    {{--   <img src="imagenes/logo.png" alt="" class="footer__img">
                     <image class="footer__img" width="25%" height="25%" src="{{asset('imagenes/logowhite.png')}}"/>  --}}
@@ -62,7 +62,7 @@
                 </div>
             </div>
         </div>
-            <p class="footer_copy">&#169; SUPPORT. Todos los derechos Reservados</p>
+            <p class="footer_copy">&#169; FICCTSOFT. Todos los derechos Reservados</p>
         </div>
     </footer>
 

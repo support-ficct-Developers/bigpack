@@ -47,7 +47,7 @@ return [
     |
     */
 
-    'logo' => '<b>SUPPORT</b>',
+    'logo' => '<b>FICCTSOFT</b>',
     'logo_img' => 'imagenes/logo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
