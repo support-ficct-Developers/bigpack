@@ -175,7 +175,7 @@ return [
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
     'right_sidebar_scrollbar_theme' => 'os-theme-light',
-    'right_sidebar_scrollbar_auto_hide' => 'l' ,
+    'right_sidebar_scrollbar_auto_hide' => 'l',
 
     /*
     |--------------------------------------------------------------------------
@@ -229,185 +229,79 @@ return [
     'menu' => [
         // Navbar items:
         [
-            'type'         => 'navbar-search',
-            'text'         => 'search',
-            'topnav_right' => false,
-        ],
-        [
-            'type'         => 'fullscreen-widget',
-            'topnav_right' => false,
-        ],
-
-
-        // Sidebar items:
-        /* [
-            'type' => 'sidebar-menu-search',
+            'type' => 'navbar-search',
             'text' => 'search',
-        ], */
-        [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'topnav_right' => false,
         ],
         [
-            'text'       => 'INICIO',
-            'icon' => 'fas fa-home',
-            'url'        => '/postSemestres',
-            // 'can' => 'admin.home' //solo pueden acceder los que tengan ese permiso
+            'type' => 'fullscreen-widget',
+            'topnav_right' => false,
         ],
-    
-        /* ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ], */
-        
 
-        ['header' => 'ADMINISTRAR',
-        'can' => 'packs.index',
+        [
+            'text' => 'INICIO',
+            'icon' => 'fas fa-home',
+            'route' => 'admin.home',
+        ],
+
+        [
+            'header' => 'ADMINISTRAR',
+            'can' => 'packs.index',
         ],
         //Usuarios------------------------------------------------------------------
         [
             'text' => 'ADM Usuarios',
-            'url'  => 'users',
+            'route' => 'users.index',
             'icon' => 'fas fa-user-lock',
-            'icon_color'=>'primary',
+            'icon_color' => 'primary',
             'can' => 'users.index'
         ],
 
         [
             'text' => 'Habilitar Packs',
-            'url'  => 'packs-habilitar',
+            'route' => 'packs.habilitar',
             'icon' => 'fas fa-check',
-            'icon_color'=>'primary',
+            'icon_color' => 'primary',
             'can' => 'packs.index'
         ],
-        
+
         //------------------------------------------------------------------
         [
-            'text'    => 'Agregar',
-            'icon'    => 'fas fa-plus',
+            'text' => 'Agregar',
+            'icon' => 'fas fa-plus',
             'can' => 'agregar',
             'submenu' => [
                 [
                     'text' => 'Pack',
-                    'url'  => 'packs',
+                    'route' => 'packs.index',
                     'can' => 'packs.index'
                 ],
                 [
                     'text' => 'Materia',
-                    'url'  => 'materias',
+                    'route' => 'materias.index',
                     'can' => 'materias.index'
                 ],
                 [
                     'text' => 'Docente',
-                    'url'  => 'docentes',
+                    'route' => 'docentes.index',
                     'can' => 'docentes.index'
                 ],
                 [
                     'text' => 'Auxiliar',
-                    'url'  => 'auxiliares',
+                    'route' => 'auxiliares.index',
                     'can' => 'auxiliares.index'
                 ],
 
             ],
         ],
-        
+
 
         ['header' => 'ACCESOS RÁPIDOS'],
         [
-            'text'       => 'Auxiliares',
-            'icon' => 'fas fa-user-secret',
-            'url'        => '/postAuxiliares',
+            'text' => 'Home Publico',
+            'icon' => 'fas fa-home',
+            'route' => 'home',
         ],
-        [
-            'text'    => 'Semestres',
-            'icon'    => 'fas fa-building',
-            'submenu' => [
-                [
-                    'text' => 'Semestre 1',
-                    'url'  => 'postMaterias/1',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 2',
-                    'url'  => 'postMaterias/2',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 3',
-                    'url'  => 'postMaterias/3',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 4',
-                    'url'  => 'postMaterias/4',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 5',
-                    'url'  => 'postMaterias/5',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 6',
-                    'url'  => 'postMaterias/6',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 7',
-                    'url'  => 'postMaterias/7',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 8',
-                    'url'  => 'postMaterias/8',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Semestre 9',
-                    'url'  => 'postMaterias/9',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Electivas',
-                    'url'  => 'postMaterias/10',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-                [
-                    'text' => 'Mod. de Graduacion',
-                    'url'  => 'postMaterias/11',
-                    'icon'    => 'fas fa-lightbulb',
-                ],
-
-            ],
-        ],
-       
-        
-
-        ['header' => 'CONTACTANOS A+'],
-        [
-            'text'       => 'Desarrolladores',
-            'icon' => 'fas fa-user-secret',
-            'url'        => '/developers',
-        ],
-        [
-            'text'       => 'Facebook',
-            'icon' => 'fab fa-facebook',
-            'url'        => 'https://www.facebook.com/AprendeMasFICCT',
-        ],
-        [
-            'text'       => 'Youtube',
-            'icon' => 'fab fa-youtube',
-            'url'        => 'https://www.youtube.com/c/AprendeM%C3%A1sFICCT',
-        ],
-        
     ],
 
     /*

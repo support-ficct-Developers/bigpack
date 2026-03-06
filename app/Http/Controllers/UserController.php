@@ -23,10 +23,10 @@ class UserController extends Controller
     {
         // $users = DB::table('users')->get();
         $users = DB::table('users')
-                     ->join('model_has_roles', 'model_id', '=', 'users.id')
-                     ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
-                     ->select('users.*', 'roles.name as roles_name')
-                     ->get();
+            ->join('model_has_roles', 'model_id', '=', 'users.id')
+            ->join('roles', 'roles.id', '=', 'model_has_roles.role_id')
+            ->select('users.*', 'roles.name as roles_name')
+            ->get();
         return view('users.index', compact('users'));
     }
 
@@ -39,18 +39,18 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-       // date_default_timezone_set("America/La_Paz");
-       //return $request;
-        $users=User::create([
+        // date_default_timezone_set("America/La_Paz");
+        //return $request;
+        $users = User::create([
             'name' => $request['name'],
             'email' => $request['email'],
             'password' => Hash::make($request['password']),
-            'profile_url'=>"imagenes/sin-perfil.jpg",
+            'profile_url' => "imagenes/sin-perfil.jpg",
             //'password' =>$request['password'], no oculta contraseña
         ]);
-        
+
         //se agrega un rol al usuario
-        if($request->roles > 0){
+        if ($request->roles > 0) {
             $users->roles()->sync($request->roles);
             $users->save();
         }
@@ -63,72 +63,73 @@ class UserController extends Controller
         //
     }
 
-    public function show2()
+    public function profile()
     {
-        $user=User::find(auth()->user()->id);
-        return view('user.edit',compact('user'));
+        $user = User::find(auth()->user()->id);
+        return view('user.edit', compact('user'));
     }
-    public function update2(Request $request)
+
+    public function updateProfile(Request $request)
     {
         date_default_timezone_set("America/La_Paz");
 
-        $user=User::find(auth()->user()->id);
-       //actualiza nombre
-       if($user->name <> $request->name){
+        $user = User::find(auth()->user()->id);
+        //actualiza nombre
+        if ($user->name <> $request->name) {
             $user->name = $request->name;
         }
         //actualiza email
-        if($user->email <> $request->email){
+        if ($user->email <> $request->email) {
             $user->email = $request->email;
         }
         //actualiza contraseña
-        if($request->password <> ''){
-            $user->password =password_hash($request->password,PASSWORD_DEFAULT);
+        if ($request->password <> '') {
+            $user->password = password_hash($request->password, PASSWORD_DEFAULT);
         }
 
         $user->save();
-        return redirect()->route('user.show')->with('info', 'Se actualizo correctamente');
+        return redirect()->route('user.profile')->with('info', 'Se actualizo correctamente');
     }
 
 
     public function edit(User $user)
     {
-        if ($user->id==2 && $user->id !== auth()->user()->id){
+        if ($user->id == 2 && $user->id !== auth()->user()->id) {
             return redirect()->route('users.index')->with('error', 'No Puedes Editar los datos del Admin');
         }
 
         $roles = Role::all();
-        return view('users.edit',compact('user', 'roles') );
- 
+        return view('users.edit', compact('user', 'roles'));
+
     }
 
     public function update(Request $request, User $user)
     {
-        if ($user->id==2 && $user->id !== auth()->user()->id){
+        if ($user->id == 2 && $user->id !== auth()->user()->id) {
             return redirect()->route('users.edit', $user)->with('error', 'No Puedes Editar los datos del Admin');
         }
         //actualiza nombre
-        if($user->name <> $request->name){
+        if ($user->name <> $request->name) {
             $user->name = $request->name;
         }
         //actualiza contraseña
-        if($request->password <> ''){
+        if ($request->password <> '') {
             $user->password = bcrypt($request->password);
         }
 
-        if($user->email <> $request->email)
+        if ($user->email <> $request->email)
             $user->email = $request->email;
         //actualiza los roles
-        if($request->roles > 0 ){
+        if ($request->roles > 0) {
             $user->roles()->sync($request->roles);
-        }           
+        }
         $user->save(); //guardar cambios de usuario 
         return redirect()->route('users.edit', $user)->with('info', 'se actualizo el usuario correctamente');
     }
 
     public function destroy(User $user)
     {
-        if ($user->id==2 && $user->id !== auth()->user()->id){
+        if ($user->id == 2 && $user->id !== auth()->user()->id) {
             return redirect()->route('users.index')->with('error', 'No Puedes eliminar al Admin de Admins');
         }
 

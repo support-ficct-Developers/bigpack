@@ -62,7 +62,7 @@
         {{-- User menu footer --}}
         <li class="user-footer">
             <a class="btn btn-default btn-flat float-right @if(!$profile_url) btn-block @endif"
-                href="{{route('user.show')}}" >
+                href="{{route('user.profile')}}" >
                 <i class="fa fa-fw fa-user"></i>
                 {{ __('Perfil') }}
             </a>
@@ -70,7 +70,7 @@
 
         <li class="user-footer">
             <a class="btn btn-default btn-flat float-right @if(!$profile_url) btn-block @endif"
-                href="{{route('packs.show2')}}">
+                href="{{route('user.packs')}}">
                 
                 {{ __('Agregar Packs') }}
             </a>
