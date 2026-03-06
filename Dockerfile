@@ -1,4 +1,4 @@
-FROM php:8.3.0beta2-fpm
+FROM php:8.3.30-fpm
 
 # Instalamos las extensiones de PHP necesarias
 RUN apt-get update && apt-get install -y libpq-dev libzip-dev libgd-dev \
