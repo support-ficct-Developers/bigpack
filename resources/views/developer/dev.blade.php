@@ -1,222 +1,111 @@
-@extends('adminlte::page')
+@extends('layouts.public')
 
-@section('title', 'FicctSoft - Aprende Mas')
-
-@section('content_header')
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-@stop
+@section('title', 'Aprende + | Desarrolladores')
 
 @section('content')
-        
-
-    <body>
-        <main>
-            
-            <section class="about section" id="about">
-                
-             <h2 class="section_title">
-                 Desarrolladores
-                 {{--  <image class="" width="8%" height="8%" src="{{asset('imagenes/logoo.png')}}"/>  --}}
-                </h2>
-             <span class="section_subtitle">Acerca de nosotros</span> 
-             
-         
-             <div class="about_container container grid">
-                 <div class="home_img">
-                     <svg class="home_blob"viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <mask id="mask0" mask-type="alpha">
-                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                             130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                             97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                             0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                         </mask>
-                         <g mask="url(#mask0)">
-                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                             165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                             129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                             -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-         
-                             <image class="home_blob-img" x='12' y='18' xlink:href="{{asset('imagenes/daniel2.png')}}"/>
-                         </g>
-                     </svg>                 
-         
-                 </div>
-                <!--  <img src="./img/PicsArt_09-24-12.28.24.jpg" alt="" class="about_img"> -->
-                 <div class="about_data">
-                     <h1 class="desa_title">J Daniel - Owner</h1>
-                     <span class="desa_subtitle">Backend-Developer </span>
-                     <p class="about_description">Estudiante de la Carrera de Ingenieria en Sistemas 
-                         de la Universidad Autónoma Gabriel René Moreno</p>
-                     
-                     <div class="about_buttons">
-                         <a href="http://wa.me//+59169086228" class="button button--flex">
-                            Contáctame<i class="uil uil-message button_icon"></i>
-                         </a>
-                     </div>
-                 </div>
-             </div>
-
-             <div class="about_container container grid">
-                <div class="home_img">
-                    <svg class="home_blob"viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-        
-                            <image class="home_blob-img" x='12' y='18' xlink:href="{{asset('imagenes/cayola.png')}}"/>
-                        </g>
-                    </svg>                 
-        
-                </div>
-                <!-- <img src="./img/ESTO.png" alt="" class="about_img"> -->
-                <div class="about_data">
-                    <h1 class="desa_title">Fernando</h1>
-                    <span class="desa_subtitle">Frontend-Developer</span>
-                    <p class="about_description">Estudiante de la Carrera de Ingenieria en Redes y Telecomunicaciones 
-                        de la Universidad Autónoma Gabriel René Moreno</p>
-                    
-                    <div class="about_buttons">
-                        <a href="http://wa.me//+59173665042" class="button button--flex">
-                            Contáctame<i class="uil uil-message button_icon"></i>
-                        </a>
-                    </div>
-                </div>
+    <main class="w-full flex-1">
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="about">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 dark:text-white uppercase tracking-wider">Desarrolladores</h2>
+                <span class="mt-4 text-gray-500 dark:text-gray-400 block font-medium">Acerca de nosotros</span>
             </div>
-          
-             <div class="about_container container grid">
-                 <div class="home_img">
-                     <svg class="home_blob"viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <mask id="mask0" mask-type="alpha">
-                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                             130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                             97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                             0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                         </mask>
-                         <g mask="url(#mask0)">
-                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                             165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                             129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                             -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-         
-                             <image class="home_blob-img" x='12' y='18' xlink:href="{{asset('imagenes/Harold.png')}}"/>
-                         </g>
-                     </svg>                 
-         
-                 </div>
-                 <!-- <img src="./img/WhatsApp Image 2021-10-05 at 09.23.29.jpeg" alt="" class="about_img"> -->
-                 <div class="about_data">
-                     <h1 class="desa_title">Harold</h1>
-                     <span class="desa_subtitle">Backend-Developer </span>
-                     <p class="about_description">Estudiante de la Carrera de Ingenieria en Sistemas
-                         de la Universidad Autónoma Gabriel René Moreno</p>
-                     
-                     <div class="about_buttons">
-                         <a href="http://wa.me//+59171190290" class="button button--flex">
-                            Contáctame<i class="uil uil-message button_icon"></i>
-                         </a>
-                     </div>
-                 </div>
-             </div>
-         
-             <div class="about_container container grid">
-                 <div class="home_img">
-                     <svg class="home_blob"viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                         <mask id="mask0" mask-type="alpha">
-                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                             130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                             97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                             0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                         </mask>
-                         <g mask="url(#mask0)">
-                             <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                             165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                             129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                             -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-         
-                             <image class="home_blob-img" x='12' y='18' xlink:href="{{asset('imagenes/darwin.png')}}"/>
-                         </g>
-                     </svg>                 
-         
-                 </div>
-                 <div class="about_data">
-                     <h1 class="desa_title">Darwin</h1>
-                     <span class="desa_subtitle">Backend-Developer </span>
-                     <p class="about_description">Estudiante de la Carrera de Ingenieria Informatica 
-                         de la Universidad Autónoma Gabriel René Moreno</p>
-                     
-                     <div class="about_buttons">
-                         <a href="http://wa.me//+59172182712" class="button button--flex">
-                            Contáctame<i class="uil uil-message button_icon"></i>
-                         </a>
-                     </div>
-                 </div>
-             </div>
 
-             <div class="about_container container grid">
-                <div class="home_img">
-                    <svg class="home_blob"viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                            130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                            97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                            0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                            165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                            129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                            -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-        
-                            <image class="home_blob-img" x='12' y='18' xlink:href="{{asset('imagenes/luishino.png')}}"/>
-                        </g>
-                    </svg>                 
-        
-                </div>
-                <div class="about_data">
-                    <h1 class="desa_title">Luishiño</h1>
-                    <span class="desa_subtitle">Seguridad Informatica</span>
-                    <p class="about_description">Estudiante de la Carrera de Ingenieria en Sistemas
-                        de la Universidad Autónoma Gabriel René Moreno</p>
-                    
-                    <div class="about_buttons">
-                        <a href="http://wa.me//+59161320208" class="button button--flex">
-                           Contáctame<i class="uil uil-message button_icon"></i>
+            <!-- J Daniel -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mt-8 max-w-4xl mx-auto border border-gray-100 dark:border-gray-700 transition-all hover:shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8">
+                    <div class="flex justify-center md:justify-end">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-brand-100 dark:border-brand-900/50 shadow-inner">
+                            <!-- Si la imagen daniel2.png está dentro del blob antes, la ponemos normal ahora -->
+                            <img src="{{ asset('imagenes/daniel2.png') }}" alt="J Daniel" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left flex flex-col items-center md:items-start space-y-4">
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Jose Daniel - Owner</h1>
+                        <span class="inline-block px-3 py-1 bg-brand-100 text-brand-700 dark:bg-brand-900/40 dark:text-brand-300 rounded-full text-sm font-semibold">Backend-Developer</span>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Egresado de la Carrera de Ingeniería en Sistemas 2018 - 2023
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Intercentro FICCT 2022 - 2023
+                        </p>
+                        <a href="http://wa.me//+59169086228" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700 dark:hover:bg-brand-500 shadow-sm transition-colors duration-200 mt-4">
+                            Contáctame 
+                            <i class="fab fa-whatsapp ml-2 text-lg"></i>
                         </a>
                     </div>
                 </div>
             </div>
 
-             
-                         
-         </section>
-         </main>
+            <!-- Harold -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mt-8 max-w-4xl mx-auto border border-gray-100 dark:border-gray-700 transition-all hover:shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8">
+                    <div class="flex justify-center md:justify-end">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-green-100 dark:border-green-900/50 shadow-inner">
+                            <img src="{{ asset('imagenes/Harold.png') }}" alt="Harold" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left flex flex-col items-center md:items-start space-y-4">
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Harold</h1>
+                        <span class="inline-block px-3 py-1 bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300 rounded-full text-sm font-semibold">Backend-Developer</span>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Egresado de la Carrera de Ingeniería en Sistemas 2018 - 2023
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Secretario General de Sistemas 2022 - 2024
+                        </p>
+                        <a href="http://wa.me//+59171190290" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700 dark:hover:bg-brand-500 shadow-sm transition-colors duration-200 mt-4">
+                            Contáctame 
+                            <i class="fab fa-whatsapp ml-2 text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Darwin -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mt-8 max-w-4xl mx-auto border border-gray-100 dark:border-gray-700 transition-all hover:shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8">
+                    <div class="flex justify-center md:justify-end">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-purple-100 dark:border-purple-900/50 shadow-inner">
+                            <img src="{{ asset('imagenes/darwin.png') }}" alt="Darwin" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left flex flex-col items-center md:items-start space-y-4">
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Darwin</h1>
+                        <span class="inline-block px-3 py-1 bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-300 rounded-full text-sm font-semibold">Backend-Developer</span>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Egresado de la Carrera de Ingeniería Informática 2018 - 2023
+                        </p>
+                        
+                        <a href="http://wa.me//+59172182712" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700 dark:hover:bg-brand-500 shadow-sm transition-colors duration-200 mt-4">
+                            Contáctame 
+                            <i class="fab fa-whatsapp ml-2 text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-        
-            <a href="#" class="scrollup" id="scroll-up">
-                <i class="uil uil-arrow-up scrollup_icon"></i>
-            </a>
-    </body>
-@stop
+            <!-- Luishiño -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mt-8 max-w-4xl mx-auto border border-gray-100 dark:border-gray-700 transition-all hover:shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center p-8">
+                    <div class="flex justify-center md:justify-end">
+                        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-yellow-100 dark:border-yellow-900/50 shadow-inner">
+                            <img src="{{ asset('imagenes/luishino.png') }}" alt="Luishiño" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="text-center md:text-left flex flex-col items-center md:items-start space-y-4">
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Luishiño</h1>
+                        <span class="inline-block px-3 py-1 bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-300 rounded-full text-sm font-semibold">Backend-Developer</span>
+                        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Estudiante de la Carrera de Ingeniería en Sistemas de la Universidad Autónoma Gabriel René Moreno
+                        </p>
+                        <a href="http://wa.me//+59161320208" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand-600 hover:bg-brand-700 dark:hover:bg-brand-500 shadow-sm transition-colors duration-200 mt-4">
+                            Contáctame 
+                            <i class="fab fa-whatsapp ml-2 text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-@section('css')
-    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
-
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-
-@stop
-
-@section('js')
-<!--========== SCROLL REVEAL ==========-->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="{{asset('js/main.js')}}"></script>
+        </section>
+    </main>
 @stop

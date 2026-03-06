@@ -17,15 +17,17 @@ class MateriaController extends Controller
         $this->middleware('can:materias.edit')->only('edit', 'update');
         $this->middleware('can:materias.destroy')->only('destroy');
     }
-    
+
     public function index()
     {
-        $materias=Materia::all();
-        return view('materia.index',compact('materias'));
+        $materias = Materia::all();
+        return view('materia.index', compact('materias'));
     }
-    public function indexPost(Request $request,$semestres){
-        $materias = Semestre::find($semestres)->materias;
-        return view('materiaPost.postprueba',compact('materias'));
+
+    public function semestreMaterias(Request $request, $semestreId)
+    {
+        $materias = Semestre::find($semestreId)->materias;
+        return view('materiaPost.postMateria', compact('materias'));
     }
 
     /**
@@ -36,7 +38,7 @@ class MateriaController extends Controller
     public function create()
     {
         $semestres = DB::table('semestres')->get();
-        return view('materia.create',compact('semestres'));
+        return view('materia.create', compact('semestres'));
     }
 
     /**
@@ -48,10 +50,10 @@ class MateriaController extends Controller
     public function store(Request $request)
     {
         date_default_timezone_set("America/La_Paz");
-        $materias=Materia::create([
-            'id_semestre'=>request('id_semestre'),
-            'nombre'=>request('nombre'),
-            'sigla'=>request('sigla'),
+        $materias = Materia::create([
+            'id_semestre' => request('id_semestre'),
+            'nombre' => request('nombre'),
+            'sigla' => request('sigla'),
         ]);
         return redirect()->route('materias.index');
     }
@@ -64,15 +66,15 @@ class MateriaController extends Controller
      */
     public function show(Materia $materia)
     {
-        
-        return view('materia.show',compact ('materia'));
+
+        return view('materia.show', compact('materia'));
     }
 
     public function show2(Request $request)
     {
-        $materias = DB::table('materias')->where('id_semestre',$request)->get();
+        $materias = DB::table('materias')->where('id_semestre', $request)->get();
 
-        return view('materia.index',compact('materias'));
+        return view('materia.index', compact('materias'));
     }
     /**
      * Show the form for editing the specified resource.
@@ -82,8 +84,8 @@ class MateriaController extends Controller
      */
     public function edit(Materia $materia)
     {
-        $semestres=DB::table('semestres')->get();
-        return view('materia.edit',compact('materia','semestres'));
+        $semestres = DB::table('semestres')->get();
+        return view('materia.edit', compact('materia', 'semestres'));
     }
 
     /**
@@ -96,9 +98,9 @@ class MateriaController extends Controller
     public function update(Request $request, Materia $materia)
     {
         date_default_timezone_set("America/La_Paz");
-        $materia->id_semestre=$request->id_semestre;
-        $materia->nombre=$request->nombre;
-        $materia->sigla=$request->sigla;
+        $materia->id_semestre = $request->id_semestre;
+        $materia->nombre = $request->nombre;
+        $materia->sigla = $request->sigla;
         $materia->save();
 
         return redirect()->route('materias.index');
